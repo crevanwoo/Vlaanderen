@@ -9,6 +9,10 @@
 	.big_h {
 		padding-bottom: $pad;
 	}
+	p.text {
+		font-size: $fs_18;
+		line-height: 150%;
+	}
 	.slider {
 		text-align: center;
 	}
@@ -132,16 +136,16 @@
 				box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
 			}
 			.scroll-bar {
+				@extend %scroll;
 				width: 3px;
 				position: absolute;
 				top: 25px;
 				bottom: 15px;
 				right: 5px;
-				background-color: rgba(204, 204, 204, 1); // 0.2)
 				z-index: 1;
 				.thumb {
+					@extend %thumb;
 					position: relative;
-					background-color: $scroll_thumb_color;
 				}
 			}
 			.tiny_h {

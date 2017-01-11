@@ -25,6 +25,7 @@
     $fs_16: 16px;
     $fs_18: 18px;
     $fs_20: 20px;
+    $fs_22: 22px;
     $fs_24: 24px;
     $fs_30: 30px;
     //Sizes
@@ -123,6 +124,14 @@
     		@include orange_gradient;
     		color: white;
     	}
+    }
+    
+    %scroll {
+    	background-color: rgba(204, 204, 204, 1); // 0.2)
+    }
+    
+    %thumb {
+    	background-color: $scroll_thumb_color;
     }
     
     @mixin radius($position) {

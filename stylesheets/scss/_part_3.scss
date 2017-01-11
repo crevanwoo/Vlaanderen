@@ -24,7 +24,7 @@
 			float: left;
 			margin: $pad/2;
 			overflow: hidden;
-			cursor:pointer;
+			cursor: pointer;
 			.bg_img {
 				@extend %bg_img;
 			}
@@ -35,8 +35,7 @@
 				right: 0;
 				bottom: 0;
 				background-image: url(../images/hover.png);
-				opacity: 0;						
-				
+				opacity: 0;
 			}
 		}
 	}

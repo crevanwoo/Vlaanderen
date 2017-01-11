@@ -1,5 +1,5 @@
 	.part_4 {
-		padding-bottom: 40px;
+		padding-bottom: 60px;
 		.big_h {
 			padding-top: 55px;
 			padding-bottom: 30px;
@@ -8,6 +8,7 @@
 			text-align: center;
 			line-height: 130%;
 			font-size: $fs_16;
+			color: $font-soft;
 		}
 		.top {
 			@extend %clear;
@@ -81,6 +82,7 @@
 				width: 370px;
 				.text {
 					.title {
+						font-family: Light;
 						font-size: $fs_16;
 						color: $font-soft;
 					}
@@ -98,20 +100,30 @@
 					height: 150px;
 					.product_img {
 						position: absolute;
-						&.product_img_1 {top: 65px;
-						right: 105px;}
-						&.product_img_2 {display: none;
+						&.product_img_1 {
+							top: 65px;
+							right: 105px;
+						}
+						&.product_img_2 {
+							display: none;
 							top: 30px;
-						right: 190px;}
-						&.product_img_3 {display: none;
-							top:110px;
-						right: 250px}
-						&.product_img_4 {display: none;
+							right: 190px;
+						}
+						&.product_img_3 {
+							display: none;
+							top: 110px;
+							right: 250px
+						}
+						&.product_img_4 {
+							display: none;
 							top: 105px;
-						right: 50px}
-						&.product_img_5 {display: none;
+							right: 50px
+						}
+						&.product_img_5 {
+							display: none;
 							top: 115px;
-						right: 160px;}
+							right: 160px;
+						}
 					}
 				}
 			}
@@ -128,15 +140,8 @@
 				text-align: left;
 			}
 			form {
-				font-size: 0;
-				>div {
-					margin-right: 20px;
-				}
 				button {
-					@extend %clear_default_button_style;
-					@extend %grad;
-					display: inline-block;
-					font-size: $fs_16;
+					@extend .form_button;
 					width: 280px;
 				}
 			}

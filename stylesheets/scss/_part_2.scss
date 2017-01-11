@@ -44,7 +44,7 @@
 					margin-bottom: $pad;
 				}
 				.button {
-				@extend %grad;
+					@extend %grad;
 					padding: 0 70px;
 				}
 			}

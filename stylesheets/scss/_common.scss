@@ -7,6 +7,10 @@ body {
 body {
 	font-family: Regular;
 	color: $font_normal;
+	&.hidden {
+		position: fixed;
+		left: 0;
+	}
 }
 
 * {
@@ -52,8 +56,8 @@ h6 {
 
 .button {
 	display: inline-block;
-	height: 50px;
-	line-height: 50px;
+	height: 55px;
+	line-height: 55px;
 	font-family: Medium;
 	font-size: $fs_18;
 	border-radius: $border_rad;
@@ -116,10 +120,15 @@ h6 {
 	@include radius(bottom-left)
 }
 
+form {
+	font-size: 0;
+}
+
 .field_name,
 .field_phone {
 	position: relative;
 	display: inline-block;
+	margin-right: 20px;
 	input {
 		$input_heig: 55px;
 		padding: 0 10px 0 50px;
@@ -128,7 +137,7 @@ h6 {
 		height: $input_heig;
 		line-height: $input_heig;
 		border-radius: $border_rad;
-		border: 2px solid $gray;
+		border: 1px solid $gray;
 		font-size: $fs_16;
 		color: $font_soft;
 		box-shadow: none;
@@ -178,19 +187,32 @@ h6 {
 	transform: translate(1px, 2px)
 }
 
+.form_button {
+	@extend %clear_default_button_style;
+	@extend %grad;
+	display: inline-block;
+	font-size: $fs_16;
+	width: 300px;
+}
+
 .validator_message {
 	display: none;
 	position: absolute;
 	padding: 5px;
-	width: 100%; 
+	width: 100%;
 	height: auto;
 	border-radius: 5px;
 	background-color: #f4c430;
-	font-size: $fs_12;	
-	bottom: -5px;	
+	font-size: $fs_12;
+	bottom: -5px;
 	right: 0;
 	transform: translateY(100%);
-	
-	
 }
-.has-error .validator_message {display: block;}
+
+.has-error .validator_message {
+	display: block;
+}
+
+#google_map .gm-style>div:not(:first-of-type) {
+	display: none
+}

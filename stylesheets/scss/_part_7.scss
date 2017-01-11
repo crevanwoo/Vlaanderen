@@ -3,12 +3,14 @@
 	.big_h {
 		padding-bottom: $pad;
 	}
-	.part_7_tabs {@extend %clear;
+	.part_7_tabs {
+		@extend %clear;
 		ul {
 			float: left;
 			margin-right: $pad;
 			@extend %clear;
-			li {position: relative;
+			li {
+				position: relative;
 				$tab_trigger_height: 60px;
 				width: 300px;
 				height: $tab_trigger_height;
@@ -31,20 +33,23 @@
 						color: white;
 					}
 				}
-				&:before {content: '';
-				position: absolute;
-				right: $pad;
-				top:50%;
+				&:before {
+					content: '';
+					position: absolute;
+					right: $pad;
+					top: 50%;
 					width: 10px;
 					height: 15px;
-				transform: translateY(-50%);
-				background-image: url(../images/icon_point_arrow.png);
-				background-repeat: no-repeat;
-				background-size: contain;
-				background-position: center;}
+					transform: translateY(-50%);
+					background-image: url(../images/icon_point_arrow.png);
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: center;
+				}
 			}
 		}
-		.part_7_tabs_wrapper { width: 730px;
+		.part_7_tabs_wrapper {
+			width: 730px;
 			float: right;
 			@extend %clear;
 			height: 450px;

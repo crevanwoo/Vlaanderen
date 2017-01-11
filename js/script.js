@@ -40,8 +40,10 @@ $(".form_range.price").slider({
 	max: 100000,
 	min: 10000,
 	value: 55000,
-	step: 100,
+	step: 1000,
 });
+
+
 
 
 
@@ -49,7 +51,7 @@ var price = $(".form_range.price").slider("value");
 
 $(".form_range.month").slider({
 	animate: "fast",
-	max: 5,
+	max: 4,
 	min: 1,
 	value: 3,
 	step: 1,
@@ -166,19 +168,11 @@ $('.part_8 .slider').slick({
 });
 
 
-/*$('.popup_wrapper').each(function() {
-	
-	
-	$(this).addClass('default-skin');
-$(this).customScrollbar();
-})*/
-
-
 $('.part_8_button').on('click', function () {
 	var popup = $(this).parent().parent().find('.popup');
 
 	popup.fadeToggle('slow');
-	popup.find('.popup_wrapper').addClass('default-skin').customScrollbar();;
+	popup.find('.popup_wrapper').addClass('default-skin').customScrollbar();
 
 })
 
@@ -206,10 +200,9 @@ $(".input_name").attr('data-validation', "custom");
 
 $(".input_name").attr('data-validation-regexp', "^[a-zA-ZА-Яа-яЁё ]{4,}$");
 $(".input_phone").addClass('form-control');
-  $.validate({
-  addValidClassOnAll : true,
-	
-  });
+$.validate({
+	addValidClassOnAll: true,
+});
 
 $('.field_name .validator_message').text('Введите имя (более 3-х букв; допускаются русские и латинские символы, пробелы)');
 
@@ -217,9 +210,125 @@ $('.field_phone .validator_message').text('Введите номер телеф�
 
 
 
-
-
-
-
-
 /* --- < Forms --- */
+
+
+/* --- Modal > --- */
+
+
+$('.modal_window').on('click', function (e) {
+
+	if (e.target.classList.contains('modal_content') || e.target.classList.contains('close') || e.target.classList.contains('modal_wrapper')) {
+		modalClose(e);
+	}
+})
+
+
+
+var window_offset;
+
+function modalOpen(e) {
+	e.preventDefault(); //if trigger is link
+	var modal_id = e.target.getAttribute('data-modal-id');
+	if ($('#' + modal_id).length > 0) {
+		$('#' + modal_id).fadeIn('slow');
+		$('#' + modal_id).find('.wrapper').customScrollbar();
+		var body_width = document.body.offsetWidth;
+		window_offset = window.pageYOffset;
+		document.body.style.marginRight = window.innerWidth - body_width + "px";
+		document.body.style.width = body_width + "px";
+		document.body.style.top = "-" + window_offset + "px";
+		document.body.classList.add('hidden');
+	}
+}
+
+var modal_window;
+
+function modalClose(e) {
+	var elem = e.target;
+	console.log(elem);
+	while (!elem.classList.contains('modal')) {
+		elem = elem.parentElement;
+	}
+
+	$('#' + elem.id).fadeOut('slow', modalAfterTransition);
+
+}
+
+function modalAfterTransition() {
+	document.body.style.marginRight = 0;
+	document.body.style.width = "initial";
+	document.body.classList.remove('hidden');
+	window.scrollTo(0, window_offset);
+}
+
+$('[data-modal-id]').on('click', function (e) {
+	modalOpen(e)
+})
+
+$('[data-modal-id="modal_photo"]').on('click', function (e) {
+	var url = $(this).parent().attr('data-img-url');
+	$('#modal_photo').find('.modal_image').attr('src', url);
+
+})
+
+
+//$('.modal_photo').find('.wrapper').customScrollbar();
+
+/* --- < Modal --- */
+
+
+//map
+
+
+var google_map;
+
+function initMap() {
+	google_map = new google.maps.Map(document.getElementById('google_map'), {
+		center: {
+			lat: 51.167681,
+			lng: 71.447188
+		},
+		zoom: 15,
+		disableDefaultUI: true,
+
+
+	});
+
+	var marker_image = 'images/icon_marker.png';
+	var redMarker = new google.maps.Marker({
+		position: {
+			lat: 51.166230,
+			lng: 71.437161
+		},
+		map: google_map,
+		icon: marker_image
+	});
+
+
+	var map_style = [
+		{
+			featureType: "all",
+			stylers: [
+				{
+					hue: "#00d4ff"
+				},
+				{
+					saturation: -800
+				},
+				{
+					lightness: 50
+				},
+				{
+					gamma: 1
+				}]
+		}];
+
+	google_map.setOptions({
+		styles: map_style
+	});
+
+
+
+
+}
