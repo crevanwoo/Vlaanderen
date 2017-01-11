@@ -1,0 +1,43 @@
+	.part_6 {
+		position: relative;
+		padding: 60px 0;
+		.trans_bg {
+			background-image: url(../images/bg_sect_6.jpg);
+			//background-size: auto 100%;
+			opacity: 0.11;
+		}
+		.big_h {
+			padding-bottom: 45px
+		}
+		.part_6_grid {
+			margin: 0 -$pad/2;
+			@extend %clear;
+			.cell {
+				float: left;
+				width: 340px;
+				height: 375px;
+				margin: $pad/2;
+				.bg_img {
+					@extend %bg_img;
+					@extend .left-diag-rad;
+					position: relative;
+					width: 100%;
+					height: 200px;
+					margin-bottom: $pad;
+					overflow: hidden;
+					img {
+						display: none;
+					}
+				}
+				.small_h {
+					text-align: left;
+					margin-bottom: $pad;
+					line-height: 150%;
+				}
+				p {
+					font-size: $fs_16;
+					line-height: 120%;
+				}
+			}
+		}
+	}

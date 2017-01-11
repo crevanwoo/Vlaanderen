@@ -1,0 +1,89 @@
+$part_1_logo_height: 70px;
+.part_1 {
+	position: relative;
+	height: 580px + $header_height;
+	padding-top: $header_height;
+	background-origin: content-box;
+	background-image: url(../images/bg_top.jpg);
+	color: white;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(82, 82, 82, 0.7)
+	}
+	.wrapper {
+		@extend %clear;
+		margin-top: 70px;
+		text-align: center;
+		.part_1_logo {
+			float: left;
+			width: 250px;
+			margin-bottom: 70px;
+			.top {
+				margin-bottom: $pad;
+				@extend %clear;
+				.picture {
+					float: left;
+					margin-right: $pad;
+					img {
+						display: block;
+						width: auto;
+						height: $part_1_logo_height;
+					}
+				}
+				.text {
+					float: left;
+					line-height: $part_1_logo_height;
+					font-family: Medium;
+					font-size: $fs_24;
+				}
+			}
+			.bottom {
+				text-align: left;
+				font-size: $fs_16;
+			}
+		}
+		.part_1_contacts {
+			float: right;
+			text-align: right;
+			.tel_number {
+				margin-bottom: 15px;
+				font-family: Medium;
+				font-size: $fs_24;
+			}
+			.part_1_button {
+				@extend %trans;
+				$btn_h: 40px;
+				display: inline-block;
+				height: $btn_h;
+				padding: 0 $pad;
+				img {
+					position: relative;
+					top: 20%;
+					width: 15px;
+					height: auto;
+					margin-right: 5px;
+				}
+				span {
+					position: relative;
+					top: 25%;
+				}
+			}
+		}
+		.part_1_text {
+			clear: both;
+			margin-bottom: 110px;
+			text-align: center;
+			line-height: 150%;
+			font-family: Medium;
+			font-size: $fs_30;
+		}
+		.button {
+			@extend %grad;
+			padding: 0 30px;
+		}
+	}
+}

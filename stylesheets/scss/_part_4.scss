@@ -1,0 +1,144 @@
+	.part_4 {
+		padding-bottom: 40px;
+		.big_h {
+			padding-top: 55px;
+			padding-bottom: 30px;
+		}
+		p {
+			text-align: center;
+			line-height: 130%;
+			font-size: $fs_16;
+		}
+		.top {
+			@extend %clear;
+			padding-left: $pad;
+			padding-top: 90px;
+			.ranges {
+				padding-bottom: $pad;
+				width: 600px;
+				float: left;
+				@extend %clear;
+				.range_h {
+					margin-top: 45px;
+					margin-bottom: 10px;
+					font-size: $fs_16;
+					color: $font_soft;
+				}
+				.form_range {
+					position: relative;
+					height: 13px;
+					cursor: pointer;
+					margin-bottom: 10px;
+					.line {
+						position: relative;
+						top: 7px;
+						height: 3px;
+						background-color: #e7e7e7;
+					}
+					.ui-slider-handle {
+						position: relative;
+						display: block;
+						width: 12px;
+						height: 12px;
+						border-radius: 50%;
+						background-color: #567ba7;
+					}
+					.nums {
+						position: absolute;
+						width: 100%;
+						top: 20px;
+						font-size: 0;
+						color: $font_soft;
+						.num {
+							display: inline-block;
+							font-size: $fs_12;
+							text-align: center;
+							&:first-of-type {
+								text-align: left;
+							}
+							&:last-of-type {
+								text-align: right
+							}
+						}
+						&.nums_price .num {
+							width: 33.33%
+						}
+						&.nums_month .num {
+							width: 25%;
+							&:first-of-type {
+								width: 12.5%;
+							}
+							&:last-of-type {
+								width: 12.5%;
+							}
+						}
+					}
+				}
+			}
+			.final_amount {
+				text-align: left;
+				float: right;
+				width: 370px;
+				.text {
+					.title {
+						font-size: $fs_16;
+						color: $font-soft;
+					}
+					.calc_summ {
+						font-family: Medium;
+						font-size: $fs_30;
+						line-height: 150%;
+					}
+					.calc_month {
+						font-size: $fs_14;
+					}
+				}
+				.pictures {
+					position: relative;
+					height: 150px;
+					.product_img {
+						position: absolute;
+						&.product_img_1 {top: 65px;
+						right: 105px;}
+						&.product_img_2 {display: none;
+							top: 30px;
+						right: 190px;}
+						&.product_img_3 {display: none;
+							top:110px;
+						right: 250px}
+						&.product_img_4 {display: none;
+							top: 105px;
+						right: 50px}
+						&.product_img_5 {display: none;
+							top: 115px;
+						right: 160px;}
+					}
+				}
+			}
+		}
+		.bottom {
+			padding-left: $pad;
+			clear: both;
+			.mid_h {
+				padding-top: 50px;
+			}
+			p {
+				padding-bottom: $pad;
+				padding-top: 10px;
+				text-align: left;
+			}
+			form {
+				font-size: 0;
+				>div {
+					margin-right: 20px;
+				}
+				button {
+					@extend %clear_default_button_style;
+					@extend %grad;
+					display: inline-block;
+					font-size: $fs_16;
+					width: 280px;
+				}
+			}
+		}
+	}

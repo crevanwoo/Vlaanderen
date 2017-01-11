@@ -1,0 +1,172 @@
+.part_8 {
+	$big_padding: 40px;
+	position: relative;
+	padding: $pad 0;
+	.trans_bg {
+		background-image: url(../images/bg_sect_8.jpg);
+		opacity: 0.15;
+	}
+	.big_h {
+		padding-bottom: $pad;
+	}
+	.slider {
+		text-align: center;
+	}
+	.slick-prev,
+	.slick-next {
+		@extend %clear_default_button_style;
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		bottom: 25%;
+		border-radius: 50%;
+		background-image: url(../images/icon_arrow.png);
+		background-size: contain;
+		cursor: pointer;
+		z-index: 1;
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.2);
+		}
+	}
+	.slick-prev {
+		left: 0;
+		transform: rotate(180deg)
+	}
+	.slick-next {
+		right: 0
+	}
+	.slick-dots {
+		display: inline-block;
+		li {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			margin: 3px;
+			border-radius: 50%;
+			background-color: $font_normal;
+			cursor: pointer;
+			button {
+				@extend %clear_default_button_style;
+				width: 100%;
+				height: 100%;
+			}
+			&.slick-active {
+				background-color: $orange
+			}
+		}
+	}
+	.single_slide {
+		$btn_height: 50px;
+		position: relative;
+		padding: $big_padding $big_padding 5px $big_padding;
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			width: 21px;
+			height: 19px;
+			background-image: url(../images/icon_quote.png);
+			background-size: contain;
+			top: $big_padding + $pad;
+		}
+		&:before {
+			left: 0;
+		}
+		&:after {
+			right: 0;
+			transform: rotate(180deg)
+		}
+		.mid_h {
+			text-align: left;
+			padding: $pad 0;
+			span {
+				font-size: $fs_18;
+			}
+		}
+		.text {
+			font-size: $fs_18;
+			text-align: justify;
+			padding-bottom: $pad;
+			color: $font_soft;
+		}
+		.right {
+			padding-top: $pad;
+			text-align: right;
+			.part_8_button {
+				@extend %trans;
+				display: inline-block;
+				height: $btn_height;
+				margin-left: $pad;
+				padding: 0 10px;
+				font-size: $fs_18;
+				vertical-align: baseline;
+				line-height: $btn_height;
+			}
+		}
+		.popup {
+			display: none;
+			position: absolute;
+			top: 0;
+			bottom: 10px + $btn_height + $pad;
+			right: 0;
+			left: 40%;
+			box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.2);
+			border-radius: 5px;
+			background-color: white;
+			z-index: 2;
+			text-align: left;
+			.popup_wrapper {
+				margin: 10px;
+				height: 90%;
+				overflow: hidden;
+			}
+			&:before {
+				content: '';
+				width: 20px;
+				height: 20px;
+				background-color: white;
+				position: absolute;
+				right: 50px;
+				bottom: -10px;
+				transform: rotate(45deg);
+				box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+			}
+			.scroll-bar {
+				width: 3px;
+				position: absolute;
+				top: 25px;
+				bottom: 15px;
+				right: 5px;
+				background-color: rgba(204, 204, 204, 1); // 0.2)
+				z-index: 1;
+				.thumb {
+					position: relative;
+					background-color: $scroll_thumb_color;
+				}
+			}
+			.tiny_h {
+				text-transform: none;
+				margin-bottom: 10px;
+			}
+			ul {
+				margin: 0;
+				position: relative;
+				font-size: $fs_14;
+				color: $font_light;
+				line-height: 150%;
+			}
+			.close {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				width: 10px;
+				height: 10px;
+				cursor: pointer;
+				background-image: url(../images/icon_close.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+	}
+}

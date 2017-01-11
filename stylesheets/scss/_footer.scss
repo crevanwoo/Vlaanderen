@@ -1,0 +1,54 @@
+footer {
+	padding: 50px 0;
+	.wrapper {
+		@extend %clear;
+	}
+	.footer_logo {
+		$height: 60px;
+		float: left;
+		width: 240px;
+		@extend %clear;
+		.picture {
+			float: left;
+			margin-right: $pad;
+			img {
+				display: block;
+				width: auto;
+				height: $height;
+			}
+		}
+		.text {
+			float: left;
+			line-height: $height;
+			font-family: Medium;
+			font-size: $fs_18;
+		}
+	}
+	.adress {
+		float: left;
+		width: 400px;
+		text-align: left;
+		white-space: pre-line;
+		line-height: 150%;
+		font-size: $fs_14;
+		color: $font_soft;
+	}
+	.socials {
+		float: right;
+		.top {
+			font-size: 0;
+			margin-bottom: $pad;
+			text-align: right;
+			img {
+				width: 35px;
+				height: 35px;
+				margin-left: 3px;
+			}
+		}
+		.bottom {
+			text-align: right;
+			font-size: $fs_14;
+			color: $font_light
+		}
+	}
+}

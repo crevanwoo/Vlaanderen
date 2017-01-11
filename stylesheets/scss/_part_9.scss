@@ -1,0 +1,20 @@
+.part_9 {
+	padding: $pad*2 0;
+	p {
+		padding: $pad 0 40px 0;
+		font-size: $fs_16;
+		color: $font_soft;
+		text-align: center;
+	}
+	form {
+	font-size: 0;
+		>div {margin-right: 20px;}
+		
+		button {
+		@extend %clear_default_button_style;
+		@extend %grad;
+		display: inline-block;
+		font-size: $fs_16;
+		width: 300px;}
+	}
+}

@@ -1,0 +1,75 @@
+.part_5 {
+	position: relative;
+	height: 160px;
+	background-image: url(../images/bg_sect_5.jpg);
+	background-position: bottom;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(40, 91, 150, 0.67);
+	}
+	.wrapper {
+		position: relative;
+		height: 100%;
+		>div {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	.part_5_left {
+		left: 0;
+		@extend %clear;
+		width: 500px;
+		color: white;
+		.picture {
+			float: left;
+			margin-right: $pad;
+			img {
+				display: block;
+				width: auto;
+				height: 80px;
+			}
+		}
+		.text {
+			margin-top: 10px;
+			font-family: Medium;
+			font-size: $fs_24
+		}
+	}
+	.part_5_right {
+		right: 0;
+		@extend %clear;
+		.part_5_button {
+			$btn_h: 54px;
+			display: inline-block;
+			height: $btn_h;
+			padding-right: 25px;
+			padding-left: 10px;
+			text-align: center;
+			border: 2px solid white;
+			border-radius: $border_rad;
+			color: white;
+			&:hover {
+				color: #6699cc;
+				background-color: white;
+			}
+			img {
+				position: relative;
+				top: 15%;
+				width: auto;
+				height: 34px;
+				margin-right: 5px;
+			}
+			span {
+				font-size: $fs_16;
+				position: relative;
+				top: -5%;
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+.part_2 {
+	padding-bottom: 100px;
+	.big_h {
+		padding: 60px 0;
+	}
+	.part_2_grid {
+		@extend %clear;
+		$cell_height: 300px;
+		>* {
+			float: left;
+			width: 50%;
+			height: $cell_height;
+		}
+		.picture {
+			position: relative;
+			overflow: hidden;
+			.bg_img {
+				@extend %shim;
+				@extend %bg_img;
+			}
+			.text {
+				position: relative;
+				font-family: Medium;
+				font-size: $fs_24;
+				text-align: center;
+				line-height: $cell_height;
+				color: white;
+			}
+		}
+		.text {
+			position: relative;
+			.small_wrapper {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				padding: 0 55px;
+				transform: translateY(-50%);
+				text-align: center;
+				p {
+					font-size: $fs_16;
+					white-space: pre-wrap;
+					line-height: 150%;
+					margin-bottom: $pad;
+				}
+				.button {
+				@extend %grad;
+					padding: 0 70px;
+				}
+			}
+		}
+	}
+}

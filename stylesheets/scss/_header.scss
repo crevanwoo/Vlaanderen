@@ -1,0 +1,33 @@
+$header_height: 60px;
+header {
+	position: fixed;
+	height: $header_height;
+	width: 100%;
+	background-color: white;
+	z-index: 1;
+	.header_nav {
+		display: table;
+		.header_nav_items_wrapper {
+			display: table-row;
+			.header_nav_item {
+				display: table-cell;
+				font-family: Regular;
+				font-size: $fs_18;
+				text-align: center;
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					line-height: $header_height;
+					color: black;
+				}
+				&:first-of-type {
+					text-align: left
+				}
+				&:last-of-type {
+					text-align: right
+				}
+			}
+		}
+	}
+}

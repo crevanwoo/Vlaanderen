@@ -1,0 +1,135 @@
+    //Fonts
+    @font-face {
+    	font-family: Light;
+    	src: url(../fonts/GothamProLight.ttf);
+    }
+    
+    @font-face {
+    	font-family: Regular;
+    	src: url(../fonts/GothamProRegular.ttf);
+    }
+    
+    @font-face {
+    	font-family: Medium;
+    	src: url(../fonts/GothamProMedium.ttf);
+    }
+    
+    @font-face {
+    	font-family: Bold;
+    	src: url(../fonts/GothamProBold.ttf);
+    }
+    
+    //Font sizes
+    $fs_12: 12px;
+    $fs_14: 14px;
+    $fs_16: 16px;
+    $fs_18: 18px;
+    $fs_20: 20px;
+    $fs_24: 24px;
+    $fs_30: 30px;
+    //Sizes
+    $pad: 20px;
+    $border_rad: 10px;
+    //Colors
+    $gray: #ccc;
+    $orange: #ff6633;
+    $btn_border_color: $orange;
+    $cold_shim: rgba(86, 123, 167, 0.7);
+    $font_soft: #666;
+    $font_light: #999;
+    $font_normal: #333;
+    $scroll_thumb_color: $orange;
+    //Combo styles 
+    $button_border: 2px solid $btn_border_color;
+    //Mixins 
+    @mixin orange_gradient {
+    	background: -webkit-linear-gradient(0deg, #f96232 0%, #fb7f41 100%);
+    	background: -moz-linear-gradient(0deg, #f96232 0%, #fb7f41 100%);
+    	background: -o-linear-gradient(0deg, #f96232 0%, #fb7f41 100%);
+    	background: -ms-linear-gradient(0deg, #f96232 0%, #fb7f41 100%);
+    	background: linear-gradient(90deg, #f96232 0%, #fb7f41 100%);
+    }
+    
+    //Classes
+    %clear {
+    	&:after {
+    		content: '';
+    		display: block;
+    		clear: both;
+    	}
+    }
+    
+    %clear_default_button_style {
+    	background-image: none;
+    	background-color: rgba(0, 0, 0, 0);
+    	border: none;
+    	font-size: 0;
+    }
+    
+    %shim {
+    	position: relative;
+    	&:before {
+    		content: '';
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		right: 0;
+    		bottom: 0;
+    		background-color: $cold_shim;
+    	}
+    }
+    
+    %bg_img {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+    	background-position: center center;
+    	background-size: cover;
+    	background-repeat: no-repeat;
+    	img {
+    		display: none;
+    	}
+    }
+    
+    %grad {
+    	@include orange_gradient;
+    	position: relative;
+    	&:before {
+    		content: '';
+    		position: absolute;
+    		top: 0;
+    		bottom: 0;
+    		left: 0;
+    		right: 0;
+    		background-color: rgba(255, 255, 255, 0.10);
+    		display: none;
+    	}
+    	&:hover {
+    		&:before {
+    			display: block;
+    			border-radius: $border-rad;
+    		}
+    	}
+    }
+    
+    %trans {
+    	text-align: center;
+    	border: $button_border;
+    	border-radius: $border_rad;
+    	cursor: pointer;
+    	&:hover {
+    		@include orange_gradient;
+    		color: white;
+    	}
+    }
+    
+    @mixin radius($position) {
+    	border-#{$position}-radius: $border_rad;
+    }
+    
+    @mixin placeholder {
+    	font-size: $fs_14;
+    	color: $gray;
+    }

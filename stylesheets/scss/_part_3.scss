@@ -1,0 +1,43 @@
+.part_3 {
+	position: relative;
+	padding-bottom: 65px;
+	.trans_bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url(../images/bg_sect_3.jpg);
+		opacity: 0.25;
+	}
+	.big_h {
+		padding: 45px 0;
+	}
+	.part_3_grid {
+		margin: 0 -$pad/2;
+		@extend %clear;
+		.cell {
+			@extend .left-diag-rad;
+			position: relative;
+			width: 250px;
+			height: 140px;
+			float: left;
+			margin: $pad/2;
+			overflow: hidden;
+			cursor:pointer;
+			.bg_img {
+				@extend %bg_img;
+			}
+			.hover {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: url(../images/hover.png);
+				opacity: 0;						
+				
+			}
+		}
+	}
+}

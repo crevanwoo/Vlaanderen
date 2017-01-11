@@ -1,0 +1,60 @@
+.part_7 {
+	padding: $pad 0;
+	.big_h {
+		padding-bottom: $pad;
+	}
+	.part_7_tabs {@extend %clear;
+		ul {
+			float: left;
+			margin-right: $pad;
+			@extend %clear;
+			li {position: relative;
+				$tab_trigger_height: 60px;
+				width: 300px;
+				height: $tab_trigger_height;
+				padding-left: 10px;
+				margin-bottom: 10px;
+				border: 1px solid #b3b3b3;
+				line-height: $tab_trigger_height;
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					color: black;
+				}
+				&:focus {
+					outline: none;
+				}
+				&.ui-state-active {
+					background-color: rgb(86, 123, 167);
+					a {
+						color: white;
+					}
+				}
+				&:before {content: '';
+				position: absolute;
+				right: $pad;
+				top:50%;
+					width: 10px;
+					height: 15px;
+				transform: translateY(-50%);
+				background-image: url(../images/icon_point_arrow.png);
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;}
+			}
+		}
+		.part_7_tabs_wrapper { width: 730px;
+			float: right;
+			@extend %clear;
+			height: 450px;
+		}
+		.part_7_single_tab {
+			text-align: justify;
+			.tiny_h {
+				padding-bottom: $pad;
+			}
+			white-space: pre-line;
+		}
+	}
+}
