@@ -26,9 +26,8 @@ $('.part_3_grid .cell').on('mouseleave', function () {
 $('.part_5_right').on('mouseenter', function () {
 	var img = $(this).find('img');
 	img.attr('src', img.attr('data-img-2'));
-
-
 })
+
 
 $('.part_5_right').on('mouseleave', function () {
 	var img = $(this).find('img');
@@ -184,11 +183,43 @@ $('.part_8_button').on('click', function () {
 })
 
 $('.popup .close').on('click', function () {
-		var popup = $(this).parent();
+	var popup = $(this).parent();
+	popup.fadeOut('slow');
+})
 
-		popup.fadeOut('slow');
 
 
-	}
+/* --- Forms > --- */
 
-)
+
+
+
+$(".input_phone").mask("+7 (999) 999 9999");
+
+$(".input_phone, .input_name").parent().append('<div class="validator_message" />');
+
+$(".input_phone").attr('data-validation', "length");
+$(".input_phone").attr('data-validation-length', "17");
+
+
+$(".input_name").attr('data-validation', "custom");
+
+$(".input_name").attr('data-validation-regexp', "^[a-zA-ZА-Яа-яЁё ]{4,}$");
+$(".input_phone").addClass('form-control');
+  $.validate({
+  addValidClassOnAll : true,
+	
+  });
+
+$('.field_name .validator_message').text('Введите имя (более 3-х букв; допускаются русские и латинские символы, пробелы)');
+
+$('.field_phone .validator_message').text('Введите номер телефона (только цифры)');
+
+
+
+
+
+
+
+
+/* --- < Forms --- */

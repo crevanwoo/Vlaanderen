@@ -3,19 +3,38 @@
 
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>Vlaanderen</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
 	<link rel="stylesheet" href="stylesheets/jquery.custom-scrollbar.css">
+	
 	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+	
 	<link rel="stylesheet" href="stylesheets/style.css">
-	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-	<meta name="viewport" content="width=device-width">
+	
+	
+	
+
+
+
+
+
 
 	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
 	<script defer src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 	<script defer type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+	
 	<script defer type="text/javascript" src="js/jquery.custom-scrollbar.js"></script>
+	
+	<script defer src="http://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+	
+<script defer type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+	
+	
+	
 
 	<script defer src="js/script.js"></script>
 
@@ -291,11 +310,11 @@
 				<h3 class="mid_h">Ответим на ваши вопросы</h3>
 				<p>и мы вам расскажем особые условия рассрочки</p>
 
-				<form>
+				<form name="calc_form">
 					<input type="hidden" name="client_summ">
 					<input type="hidden" name="client_monthes">
-					<div class="field_name"><input type="text" placeholder="Введите ваше имя"></div>
-					<div class="field_phone"><input type="text" placeholder="Ваш телефон"></div>
+					<div class="field_name"><input type="text" placeholder="Введите ваше имя" name="client_name" class="input_name"></div>
+					<div class="field_phone"><input type="text" placeholder="Ваш телефон" name="client_phone" class="input_phone"></div>
 
 					<button type="submit" class="button">Оставить заявку</button>
 
@@ -514,8 +533,8 @@
 			<p>оставьте заявку и мы вам расскажем особые условия рассрочки</p>
 
 			<form>
-				<div class="field_name"><input type="text" placeholder="Введите ваше имя"></div>
-				<div class="field_phone"><input type="text" placeholder="Ваш телефон"></div>
+				<div class="field_name"><input type="text" placeholder="Введите ваше имя" class="input_name"></div>
+				<div class="field_phone"><input type="text" placeholder="Ваш телефон" class="input_phone"></div>
 
 				<button type="submit" class="button">Оставить заявку</button>
 

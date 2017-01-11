@@ -227,6 +227,24 @@ h6 {
       -ms-transform: translate(1px, 2px);
           transform: translate(1px, 2px); }
 
+.validator_message {
+  display: none;
+  position: absolute;
+  padding: 5px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  background-color: #f4c430;
+  font-size: 12px;
+  bottom: -5px;
+  right: 0;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%); }
+
+.has-error .validator_message {
+  display: block; }
+
 header {
   position: fixed;
   height: 60px;

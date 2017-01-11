@@ -117,38 +117,38 @@ h6 {
 }
 
 .field_name,
-.field_phone {position: relative;
+.field_phone {
+	position: relative;
 	display: inline-block;
-	input {	$input_heig: 55px;
-	
-	padding: 0 10px 0 50px;
-	display: inline-block;
-	width: 360px;
-	height: $input_heig;
-	
-	line-height: $input_heig;
-	border-radius: $border_rad;
-	border: 2px solid $gray;
-	font-size: $fs_16;
-	color: $font_soft;
-	box-shadow: none;
-	&::-webkit-input-placeholder {
-		/* Chrome/Opera/Safari */
-		@include placeholder;
+	input {
+		$input_heig: 55px;
+		padding: 0 10px 0 50px;
+		display: inline-block;
+		width: 360px;
+		height: $input_heig;
+		line-height: $input_heig;
+		border-radius: $border_rad;
+		border: 2px solid $gray;
+		font-size: $fs_16;
+		color: $font_soft;
+		box-shadow: none;
+		&::-webkit-input-placeholder {
+			/* Chrome/Opera/Safari */
+			@include placeholder;
+		}
+		&::-moz-placeholder {
+			/* Firefox 19+ */
+			@include placeholder;
+		}
+		&:-ms-input-placeholder {
+			/* IE 10+ */
+			@include placeholder;
+		}
+		&:-moz-placeholder {
+			/* Firefox 18- */
+			@include placeholder;
+		}
 	}
-	&::-moz-placeholder {
-		/* Firefox 19+ */
-		@include placeholder;
-	}
-	&:-ms-input-placeholder {
-		/* IE 10+ */
-		@include placeholder;
-	}
-	&:-moz-placeholder {
-		/* Firefox 18- */
-		@include placeholder;
-	}}
-
 	&:before {
 		content: '';
 		position: absolute;
@@ -158,7 +158,6 @@ h6 {
 		transform: translateY(-50%);
 		left: 20px;
 	}
-	
 }
 
 .field_name {
@@ -175,4 +174,23 @@ h6 {
 	}
 }
 
-.mousedown {transform: translate(1px, 2px)}
+.mousedown {
+	transform: translate(1px, 2px)
+}
+
+.validator_message {
+	display: none;
+	position: absolute;
+	padding: 5px;
+	width: 100%; 
+	height: auto;
+	border-radius: 5px;
+	background-color: #f4c430;
+	font-size: $fs_12;	
+	bottom: -5px;	
+	right: 0;
+	transform: translateY(100%);
+	
+	
+}
+.has-error .validator_message {display: block;}
