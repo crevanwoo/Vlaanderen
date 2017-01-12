@@ -64,7 +64,7 @@ $(".form_range.price").slider({
 	change: function (event, ui) {
 		price = $(".form_range.price").slider("value");
 		console.log($(".form_range.price").slider("value"));
-		$('client_summ').val(price);
+		$('[name="client_summ"]').val(price);
 		setCurrentNumbers();
 		showProducts();
 
@@ -77,7 +77,7 @@ $(".form_range.month").slider({
 	change: function (event, ui) {
 		month = $(".form_range.month").slider("value");
 		console.log($(".form_range.month").slider("value"));
-		$('client_monthes').val(month);
+		$('[name="client_monthes"]').val(month);
 		setCurrentNumbers();
 		showProducts();
 
@@ -229,7 +229,12 @@ var window_offset;
 
 function modalOpen(e) {
 	e.preventDefault(); //if trigger is link
-	var modal_id = e.target.getAttribute('data-modal-id');
+	var elem = e.target;
+	console.log(elem);
+	while (!elem.hasAttribute('data-modal-id')) {
+		elem = elem.parentElement;
+	}
+	var modal_id = elem.getAttribute('data-modal-id');
 	if ($('#' + modal_id).length > 0) {
 		$('#' + modal_id).fadeIn('slow');
 		$('#' + modal_id).find('.wrapper').customScrollbar();
@@ -262,7 +267,7 @@ function modalAfterTransition() {
 	window.scrollTo(0, window_offset);
 }
 
-$('[data-modal-id]').on('click', function (e) {
+$('[data-modal-id], [data-modal-id] *').on('click', function (e) {
 	modalOpen(e)
 })
 
@@ -332,3 +337,29 @@ function initMap() {
 
 
 }
+
+
+$('.button, .part_1_button, .part_5_button, .part_8_button').on('mousedown', function () {
+	$(this).css('transform', 'translate(1px, 2px)')
+})
+
+$('.button,.part_1_button, .part_5_button, .part_8_button').on('mouseup', function () {
+	$(this).css('transform', 'translate(0px, 0px)')
+})
+
+
+$('.button, .part_1_button, .part_8_button').prepend('<div class="button_hover" />');
+
+$('.button, .part_1_button, .part_8_button').on('mouseenter', function () {
+	$(this).find('.button_hover').animate({
+		opacity: 1
+	})
+
+})
+
+$('.button, .part_1_button, .part_8_button').on('mouseleave', function () {
+	$(this).find('.button_hover').animate({
+		opacity: 0
+	})
+
+})

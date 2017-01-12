@@ -1,4 +1,5 @@
 	.part_4 {
+		position: relative;
 		padding-bottom: 60px;
 		.big_h {
 			padding-top: 55px;
@@ -6,9 +7,18 @@
 		}
 		p {
 			text-align: center;
-			line-height: 130%;
+			line-height: 150%;
 			font-size: $fs_16;
 			color: $font-soft;
+		}
+		.section_bg {
+			position: absolute;
+			top: 200px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-image: url(../images/bg_calc.jpg);
+			background-size: 1900px auto;
 		}
 		.top {
 			@extend %clear;
@@ -51,26 +61,55 @@
 						font-size: 0;
 						color: $font_soft;
 						.num {
+							width: 33%;
+							//width: 25%;
 							display: inline-block;
 							font-size: $fs_12;
-							text-align: center;
-							&:first-of-type {
+							//text-align: center;
+							&.num_1 {
 								text-align: left;
 							}
-							&:last-of-type {
-								text-align: right
+							&.num_4 {
+								//text-align: right
 							}
 						}
-						&.nums_price .num {
-							width: 33.33%
-						}
-						&.nums_month .num {
-							width: 25%;
-							&:first-of-type {
-								width: 12.5%;
+						&.nums_price {
+							width: 100%;
+							text-align: center;
+							.num {
+								text-align: center;
+								width: 33.33%;
+								&:first-of-type {
+									text-align: left
+								}
+								&:nth-of-type(2) {
+									transform: translateX(10px)
+								}
+								&:last-of-type {
+									text-align: right;
+									transform: translateX(10px)
+								}
 							}
-							&:last-of-type {
-								width: 12.5%;
+						}
+						&.nums_month {
+							width: 101%;
+							overflow: hidden;
+							white-space: nowrap;
+							text-align: left;
+							.num {
+								text-align: left;
+								&.num_1 {
+									transform: translateX(3px)
+								}
+								&.num_2 {
+									transform: translateX(2px)
+								}
+								&.num_3 {
+									transform: translateX(1px)
+								}
+								&.num_4 {
+									//transform: translateX(30px)
+								}
 							}
 						}
 					}
@@ -88,6 +127,7 @@
 					}
 					.calc_summ {
 						font-family: Medium;
+						font-weight: 600;
 						font-size: $fs_30;
 						line-height: 150%;
 					}

@@ -37,11 +37,11 @@
 
 
 
-	<script defer type="text/javascript" src="js/form.js"></script>
+	<script defer type="text/javascript" src="js/form.min.js"></script>
 
 
 
-	<script defer type="text/javascript" src="js/script.js"></script>
+	<script defer type="text/javascript" src="js/script.min.js"></script>
 
 
 	<script defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOfwm_luATF2JBZgyOTTW9Li3qUv3gioA&callback=initMap"></script>
@@ -58,19 +58,19 @@
 
 		<nav class="header_nav wrapper">
 			<ul class="header_nav_items_wrapper">
-				<li class="header_nav_item"><a href="">Главная</a></li>
-				<li class="header_nav_item"><a href="">О нас</a></li>
-				<li class="header_nav_item"><a href="">Продукция и цены</a></li>
-				<li class="header_nav_item"><a href="">Рассрочка</a></li>
-				<li class="header_nav_item"><a href="">Почему мы</a></li>
-				<li class="header_nav_item"><a href="">Отзывы</a></li>
-				<li class="header_nav_item"><a href="">Контакты</a></li>
+				<li class="header_nav_item"><a href="#anchor_part_1">Главная</a></li>
+				<li class="header_nav_item"><a href="#anchor_part_6">О нас</a></li>
+				<li class="header_nav_item"><a href="#anchor_part_2">Продукция и цены</a></li>
+				<li class="header_nav_item"><a href="#anchor_part_4">Рассрочка</a></li>
+				<li class="header_nav_item"><a href="#anchor_part_6">Почему мы</a></li>
+				<li class="header_nav_item"><a href="#anchor_part_8">Отзывы</a></li>
+				<li class="header_nav_item"><a href="#anchor_part_10">Контакты</a></li>
 			</ul>
 		</nav>
 
 	</header>
 
-	<div class="part_1 section_bg">
+	<div class="part_1 section_bg" id="anchor_part_1">
 
 		<div class="wrapper">
 
@@ -86,13 +86,13 @@
 
 			<div class="part_1_contacts">
 				<div class="tel_number">+7 (775) 356-29-50</div>
-				<div class="part_1_button"><img src="images/icon_tel.png" alt="">
-					<span>Заказать звонок</span></div>
+				<div class="part_1_button" data-modal-id="modal_call"><img src="images/icon_tel.png" alt="" data-modal-id="modal_call">
+					<span data-modal-id="modal_call">Заказать звонок</span></div>
 			</div>
 
 			<p class="part_1_text">Покупайте постельное белье и другие предметы домашнего текстиля в рассрочку на 4 месяца без переплат</p>
 
-			<div class="button">Получить консультацию</div>
+			<div class="button" data-modal-id="modal_call">Получить консультацию</div>
 		</div>
 
 
@@ -100,7 +100,7 @@
 
 	</div>
 
-	<section class="part_2">
+	<section class="part_2" id="anchor_part_2">
 		<div class="wrapper">
 			<h2 class="big_h">Наша продукция и цены</h2>
 
@@ -243,8 +243,10 @@
 	</section>
 
 
-	<section class="part_4">
+	<section class="part_4" id="anchor_part_4"> 
+	<div class="trans_bg section_bg"></div>
 		<div class="wrapper">
+			
 
 			<h2 class="big_h">Беспроцентная рассрочка на всю продукцию</h2>
 
@@ -275,11 +277,10 @@
 					<div class="form_range month">
 						<div class="line"></div>
 						<ul class="nums nums_month">
-							<li class="num">1</li>
-							<li class="num">2</li>
-							<li class="num">3</li>
-							<li class="num">4</li>
-							<li class="num">5</li>
+							<li class="num num_1">1</li>
+							<li class="num num_2">2</li>
+							<li class="num num_3">3</li>
+							<li class="num num_4">4</li>						
 						</ul>
 
 					</div>
@@ -318,11 +319,11 @@
 				<h3 class="mid_h">Ответим на ваши вопросы</h3>
 				<p>и мы вам расскажем особые условия рассрочки</p>
 
-				<form name="calc_form">
+				<form name="calc_form" id="form_1">
 					<input type="hidden" name="client_summ">
 					<input type="hidden" name="client_monthes">
-					<div class="field_name"><input type="text" placeholder="Введите ваше имя" name="client_name" class="input_name"></div>
-					<div class="field_phone"><input type="text" placeholder="Ваш телефон" name="client_phone" class="input_phone"></div>
+					<div class="field_name"><input type="text" placeholder="Введите ваше имя" name="uname" class="input_name"></div>
+					<div class="field_phone"><input type="text" placeholder="Ваш телефон" name="uphone" class="input_phone"></div>
 
 					<button type="submit" class="button">Оставить заявку</button>
 
@@ -349,7 +350,7 @@
 			</div>
 
 			<div class="part_5_right">
-				<a class="part_5_button" href="Пример договора.pdf"><img src="images/icon_pdf_white.png" data-img-1="images/icon_pdf_white.png" data-img-2="images/icon_pdf_blue.png" alt="">
+				<a class="part_5_button" href="file.pdf"><img src="images/icon_pdf_white.png" data-img-1="images/icon_pdf_white.png" data-img-2="images/icon_pdf_blue.png" alt="">
 					<span>Пример договора.pdf</span></a>
 			</div>
 
@@ -360,7 +361,7 @@
 	</div>
 
 
-	<section class="part_6">
+	<section class="part_6" id="anchor_part_6">
 		<div class="trans_bg section_bg"></div>
 		<div class="wrapper">
 			<h2 class="big_h">Vlaanderen Kazakhstan это</h2>
@@ -445,19 +446,29 @@
 				<div class="part_7_tabs_wrapper">
 					<div id="tab-1" class="part_7_single_tab">
 						<h5 class="tiny_h">ТРИ ТЫСЯЧИ ЛЕТ...</h5>
-						Три тысячи лет Китай хранил тайну производства шелка. Большой спрос на шёлк из Европы послужил началом великому Шёлковому пути. По легенде два бродячих монаха в своих посохах выдолбили небольшие отверстия, куда спрятали личинки тутового шелкопряда и привезла за большое вознаграждение императору Византии Юстиниану, в 550 году нашей эры. Так шелк попал в Византию. Это дало возможность наладить производство собственного шелково ремесла. После крестовых походов, личинки были привезены в Европу. По преданию Филипп I Эльзасский, граф Фландрии, привез личинки тутового шелкопряда из крестового похода. Тем самым заложив прочные основы будущей текстильной промышленности Фландрии. Бурное развитие технологии и городов Гант, Антверпен, благоприятно сказывалось на развитие текстильных мануфактур.
+						Три тысячи лет Китай хранил тайну производства шелка. Большой спрос на шёлк из Европы послужил началом великому Шёлковому пути.
+
+По легенде два бродячих монаха в своих посохах выдолбили небольшие отверстия, куда спрятали личинки тутового шелкопряда и привезла за большое вознаграждение императору Византии Юстиниану, в 550 году нашей эры. 
+
+Так шелк попал в Византию. 
+
+Это дало возможность наладить производство собственного шелково ремесла. После крестовых походов, личинки были привезены в Европу. 
+
+По преданию Филипп I Эльзасский, граф Фландрии, привез личинки тутового шелкопряда из крестового похода. Тем самым заложив прочные основы будущей текстильной промышленности Фландрии. 
+
+Бурное развитие технологии и городов Гант, Антверпен, благоприятно сказывалось на развитие текстильных мануфактур.
 					</div>
 					<div id="tab-2" class="part_7_single_tab">
-						<h5 class="tiny_h"></h5>
+						<h5 class="tiny_h">LOREM IPSUM</h5>
 						LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT, SED DIAM NONUMMY NIBH EUISMOD TINCIDUNT UT LAOREET DOLORE MAGNA ALIQUAM ERAT VOLUTPAT.
 					</div>
 					<div id="tab-3" class="part_7_single_tab">
-						<h5 class="tiny_h"></h5>
+						<h5 class="tiny_h">LOREM IPSUM</h5>
 						lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
 					</div>
 
 					<div id="tab-4" class="part_7_single_tab">
-						<h5 class="tiny_h"></h5>
+						<h5 class="tiny_h">LOREM IPSUM</h5>
 						lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
 					</div>
 				</div>
@@ -467,7 +478,7 @@
 		</div>
 	</section>
 
-	<section class="part_8">
+	<section class="part_8" id="anchor_part_8">
 
 		<div class="trans_bg section_bg"></div>
 		<div class="wrapper">
@@ -481,7 +492,7 @@
 
 					<div class="right">
 						<span>Сумма:</span> <b>108 000 тг</b>
-						<div class="part_8_button">Посмотреть детали заказа</div>
+						<div class="part_8_button"><span>Посмотреть детали заказа</span></div>
 
 					</div>
 
@@ -540,9 +551,9 @@
 			<h1 class="big_h">Ответим на ваши вопросы</h1>
 			<p>оставьте заявку и мы вам расскажем особые условия рассрочки</p>
 
-			<form>
-				<div class="field_name"><input type="text" placeholder="Введите ваше имя" class="input_name"></div>
-				<div class="field_phone"><input type="text" placeholder="Ваш телефон" class="input_phone"></div>
+			<form id="form_2">		
+				<div class="field_name"><input type="text" placeholder="Введите ваше имя" class="input_name" name="uname"></div>
+				<div class="field_phone"><input type="text" placeholder="Ваш телефон" class="input_phone" name="uphone"></div>
 
 				<button type="submit" class="button">Оставить заявку</button>
 
@@ -551,7 +562,7 @@
 		</div>
 	</section>
 
-	<section class="map">
+	<section class="map" id="anchor_part_10">
 		<div id="google_map"></div>
 		<div class="wrapper">
 
@@ -613,9 +624,13 @@
 
 
 
-	<div class="modal modal_window" id="modal_1">
-		<div class="modal_shim"></div>
 
+
+<!-- MODAL 1 BEGINS -->
+
+	<div class="modal modal_window" id="modal_1">
+
+	<div class="modal_shim"></div>
 		<div class="modal_content">
 			<div class="modal_wrapper">
 
@@ -632,20 +647,43 @@
 						<div class="cell">
 
 							<div class="bg_img">
-								<img src="images/modal/modal_01.jpg" alt="">
+								<img src="images/modal/modal_14.jpg" alt="">
 							</div>
 
 							<div class="text">
-								<h6 class="small_h"> Одеяло синтепоновое</h6>
-								<p>Размеры: 50х250 см</p>
+								<h6 class="small_h">Хэппи Тайм</h6>
+								<p class="description">Состав: шёлк, хлопок
+Размеры: наволочка 50х70 см,
+Пододеяльник: 200х230 см,
+Простыня: 250х250 см</p>
 								<ul class="price"><span>Цена:</span>
-									<li>Двухспалка 8 000 тг</li>
-									<li>Полуторка 8 000 тг</li>
+									<li> 8 000 тг</li>
+								
 								</ul>
 							</div>
 						</div>
 						<!-- cell ends -->
 
+						<!-- cell begins -->
+						<div class="cell">
+
+							<div class="bg_img">
+								<img src="images/modal/modal_13.jpg" alt="">
+							</div>
+
+							<div class="text">
+								<h6 class="small_h"> Эталон</h6>
+									<p class="description">Состав: шёлк, хлопок
+Размеры: наволочка 50х70 см,
+Пододеяльник: 200х230 см,
+Простыня: 250х250 см</p>
+								<ul class="price"><span>Цена:</span>
+									<li> 12 000 тг</li>
+								
+								</ul>
+							</div>
+						</div>
+						<!-- cell ends -->
 						<!-- cell begins -->
 						<div class="cell">
 
@@ -654,17 +692,58 @@
 							</div>
 
 							<div class="text">
-								<h6 class="small_h"> Одеяло синтепоновое</h6>
-								<p>Размеры: 50х250 см</p>
+								<h6 class="small_h">Респект</h6>
+									<p class="description">Состав: шёлк, хлопок
+Размеры: наволочка 50х70 см,
+Пододеяльник: 200х230 см,
+Простыня: 250х250 см</p>
 								<ul class="price"><span>Цена:</span>
-									<li>Двухспалка 8 000 тг</li>
-									<li>Полуторка 8 000 тг</li>
+									<li> 13 000 тг</li>
+								
 								</ul>
 							</div>
 						</div>
 						<!-- cell ends -->
+						<!-- cell begins -->
+						<div class="cell">
 
+							<div class="bg_img">
+								<img src="images/modal/modal_12.jpg" alt="">
+							</div>
 
+							<div class="text">
+								<h6 class="small_h">Глория</h6>
+									<p class="description">Состав: шёлк, хлопок
+Размеры: наволочка 50х70 см,
+Пододеяльник: 200х230 см,
+Простыня: 250х250 см</p>
+								<ul class="price"><span>Цена:</span>
+									<li> 18 000 тг</li>
+								
+								</ul>
+							</div>
+						</div>
+						<!-- cell ends -->
+						<!-- cell begins -->
+						<div class="cell">
+
+							<div class="bg_img">
+								<img src="images/modal/modal_09.jpg" alt="">
+							</div>
+
+							<div class="text">
+								<h6 class="small_h">Неон</h6>
+									<p class="description">Состав: шёлк, хлопок
+Размеры: наволочка 50х70 см,
+Пододеяльник: 200х230 см,
+Простыня: 250х250 см</p>
+								<ul class="price"><span>Цена:</span>
+									<li> 21 000 тг</li>
+								
+								</ul>
+							</div>
+						</div>
+						<!-- cell ends -->
 						<!-- cell begins -->
 						<div class="cell">
 
@@ -673,11 +752,150 @@
 							</div>
 
 							<div class="text">
-								<h6 class="small_h"> Одеяло синтепоновое</h6>
+								<h6 class="small_h">Старз</h6>
+									<p class="description">Состав: шёлк, хлопок
+Размеры: наволочка 50х70 см,
+Пододеяльник: 200х230 см,
+Простыня: 250х250 см</p>
+								<ul class="price"><span>Цена:</span>
+									<li> 21 000 тг</li>
+								
+								</ul>
+							</div>
+						</div>
+						<!-- cell ends -->
+						<!-- cell begins -->
+						<div class="cell">
+
+							<div class="bg_img">
+								<img src="images/modal/modal_10.jpg" alt="">
+							</div>
+
+							<div class="text">
+								<h6 class="small_h">Миледи</h6>
+									<p class="description">Состав: шёлк, хлопок
+Размеры: наволочка 50х70 см,
+Пододеяльник: 200х230 см,
+Простыня: 250х250 см</p>
+								<ul class="price"><span>Цена:</span>
+									<li> 30 000 тг</li>
+								
+								</ul>
+							</div>
+						</div>
+						<!-- cell ends -->
+						<!-- cell begins -->
+						<div class="cell">
+
+							<div class="bg_img">
+								<img src="images/modal/modal_01.jpg" alt="">
+							</div>
+
+							<div class="text">
+								<h6 class="small_h">Шик</h6>
+									<p class="description">Состав: шёлк, хлопок
+Размеры: наволочка 50х70 см,
+Пододеяльник: 200х230 см,
+Простыня: 250х250 см</p>
+								<ul class="price"><span>Цена:</span>
+									<li> 30 000 тг</li>
+								
+								</ul>
+							</div>
+						</div>
+						<!-- cell ends -->
+						<!-- cell begins -->
+						<div class="cell">
+
+							<div class="bg_img">
+								<img src="images/modal/modal_02.jpg" alt="">
+							</div>
+
+							<div class="text">
+								<h6 class="small_h">Беби дрим</h6>
+									<p class="description">Состав: шёлк, хлопок
+Размеры: наволочка 50х70 см,
+Пододеяльник: 200х230 см,
+Простыня: 250х250 см</p>
+								<ul class="price"><span>Цена:</span>
+									<li> 30 000 тг</li>
+								
+								</ul>
+							</div>
+						</div>
+						<!-- cell ends -->
+
+
+						
+
+
+
+					</div>
+
+
+					<div class="bottom">
+
+						<h1 class="big_h">Узнайте больше об интересующей вас коллекции</h1>
+						<p>Оставьте заявку на бесплатную консультацию продавца</p>
+
+						<form id="form_3">
+							<div class="field_name"><input type="text" placeholder="Введите ваше имя" class="input_name" name="uname"></div>
+							<div class="field_phone"><input type="text" placeholder="Ваш телефон" class="input_phone" name="uphone"></div>
+
+							<button type="submit" class="button form_button">Оставить заявку</button>
+
+
+						</form>
+					</div>
+
+
+				</div>
+
+				<div class="close"></div>
+
+			</div>
+		</div>
+
+
+	</div>
+
+<!-- MODAL 1 ENDS -->
+
+<!-- MODAL 2 BEGINS -->
+
+
+	<div class="modal modal_window" id="modal_2">
+
+	<div class="modal_shim"></div>
+		<div class="modal_content">
+			<div class="modal_wrapper">
+
+
+
+				<div class="wrapper">	
+	
+
+					<h1 class="big_h">Наматрасники</h1>
+					<p class="text">Наматрасники предохраняют матрасы от загрязнения и оптимально приспосабливают постель под
+индивидуальные потребности человека. Ткани, из который сделаны наши наматрасники, способны выдержать
+многократные циклы стирок без потери качества и формы.</p>
+
+					<div class="modal_grid">
+
+						<!-- cell begins -->
+						<div class="cell">
+
+							<div class="bg_img">
+								<img src="images/modal/modal_mat_1.jpg" alt="">
+							</div>
+
+							<div class="text">
+								<h6 class="small_h">Наматрасник с синтепоновым
+наполнителем</h6>
 								<p>Размеры: 50х250 см</p>
 								<ul class="price"><span>Цена:</span>
-									<li>Двухспалка 8 000 тг</li>
-									<li>Полуторка 8 000 тг</li>
+									<li>15 000 тг</li>
+									
 								</ul>
 							</div>
 						</div>
@@ -688,38 +906,75 @@
 						<div class="cell">
 
 							<div class="bg_img">
-								<img src="images/modal/modal_04.jpg" alt="">
+								<img src="images/modal/modal_mat_2.jpg" alt="">
 							</div>
 
 							<div class="text">
-								<h6 class="small_h"> Одеяло синтепоновое</h6>
+								<h6 class="small_h">Наматрасник с поролоновым
+наполнителем</h6>
 								<p>Размеры: 50х250 см</p>
-								<ul class="price"><span>Цена:</span>
-									<li>Двухспалка 8 000 тг</li>
-									<li>Полуторка 8 000 тг</li>
+								<ul class="price"><span>Цена:</span>					<li>Полуторка 21 000 тг</li>
 								</ul>
 							</div>
 						</div>
 						<!-- cell ends -->
 
-						<!-- cell begins -->
-						<div class="cell">
 
-							<div class="bg_img">
-								<img src="images/modal/modal_05.jpg" alt="">
-							</div>
 
-							<div class="text">
-								<h6 class="small_h"> Одеяло синтепоновое</h6>
-								<p>Размеры: 50х250 см</p>
-								<ul class="price"><span>Цена:</span>
-									<li>Двухспалка 8 000 тг</li>
-									<li>Полуторка 8 000 тг</li>
-								</ul>
-							</div>
-						</div>
-						<!-- cell ends -->
+					</div>
 
+
+					<div class="bottom">
+
+						<h1 class="big_h">Узнайте больше об интересующей вас коллекции</h1>
+						<p>Оставьте заявку на бесплатную консультацию продавца</p>
+
+						<form id="form_4">
+							<div class="field_name"><input type="text" placeholder="Введите ваше имя" class="input_name" name="uname"></div>
+							<div class="field_phone"><input type="text" placeholder="Ваш телефон" class="input_phone" name="uphone"></div>
+
+							<button type="submit" class="button form_button">Оставить заявку</button>
+
+
+						</form>
+					</div>
+
+
+				</div>
+
+				<div class="close"></div>
+
+			</div>
+		</div>
+
+
+	</div>
+	
+	<!-- MODAL 2 ENDS -->
+	
+	<!-- MODAL 3 BEGINS -->
+	
+	
+	
+	
+	
+	
+	<div class="modal modal_window" id="modal_4">
+
+	<div class="modal_shim"></div>
+		<div class="modal_content">
+			<div class="modal_wrapper">
+
+
+
+				<div class="wrapper">
+
+					<h1 class="big_h">Полотенца, пледы, покрывала</h1>
+					<p class="text">Мы убеждены, что подушки и одеяла должны быть легкими, мягкими и сохранять форму даже после нескольких
+лет эксплуатации. Изготовленные в соответствии с современными стандартами качества и требованиями
+к экологичности.</p>
+
+					<div class="modal_grid">
 
 						<!-- cell begins -->
 						<div class="cell">
@@ -729,7 +984,225 @@
 							</div>
 
 							<div class="text">
-								<h6 class="small_h"> Одеяло синтепоновое</h6>
+								<h6 class="small_h">Плед махровый</h6>
+								<p>Размеры: 50х250 см</p>
+								<ul class="price"><span>Цена:</span>
+									<li>8 000 тг</li>
+									
+								</ul>
+							</div>
+						</div>
+						<!-- cell ends -->
+
+
+						<!-- cell begins -->
+						<div class="cell">
+
+							<div class="bg_img">
+								<img src="images/modal/modal_07.jpg" alt="">
+							</div>
+
+							<div class="text">
+								<h6 class="small_h">Плед взрослый</h6>
+								<p>Размеры: 50х250 см</p>
+								<ul class="price"><span>Цена:</span>
+									<li>15 000 тг</li>
+									
+								</ul>
+							</div>
+						</div>
+						<!-- cell ends -->
+							<!-- cell begins -->
+						<div class="cell">
+
+							<div class="bg_img">
+								<img src="images/modal/modal_08.jpg" alt="">
+							</div>
+
+							<div class="text">
+								<h6 class="small_h">Плед детский, игрушка</h6>
+								<p>Размеры: 50х250 см</p>
+								<ul class="price"><span>Цена:</span>
+									<li>8 000 тг</li>
+									
+								</ul>
+							</div>
+						</div>
+						<!-- cell ends -->
+							<!-- cell begins -->
+						<div class="cell">
+
+							<div class="bg_img">
+								<img src="images/modal/modal_04.jpg" alt="">
+							</div>
+
+							<div class="text">
+								<h6 class="small_h">Полотенце махровое банное</h6>
+								<p>Размеры: 50х250 см</p>
+								<ul class="price"><span>Цена:</span>
+									<li>8 000 тг</li>
+									
+								</ul>
+							</div>
+						</div>
+						<!-- cell ends -->
+							<!-- cell begins -->
+						<div class="cell">
+
+							<div class="bg_img">
+								<img src="images/modal/modal_05.jpg" alt="">
+							</div>
+
+							<div class="text">
+								<h6 class="small_h">Покрывало, хб</h6>
+								<p>Размеры: 50х250 см</p>
+								<ul class="price"><span>Цена:</span>
+									<li>Двухспалка 16 000 тг</li>
+									<li>Полуторка 14 000 тг</li>
+								</ul>
+							</div>
+						</div>
+						<!-- cell ends -->
+
+
+
+					</div>
+
+
+					<div class="bottom">
+
+						<h1 class="big_h">Узнайте больше об интересующей вас коллекции</h1>
+						<p>Оставьте заявку на бесплатную консультацию продавца</p>
+
+						<form id="form_5">
+							<div class="field_name"><input type="text" placeholder="Введите ваше имя" class="input_name" name="uname"></div>
+							<div class="field_phone"><input type="text" placeholder="Ваш телефон" class="input_phone" name="uphone"></div>
+
+							<button type="submit" class="button form_button">Оставить заявку</button>
+
+
+						</form>
+					</div>
+
+
+				</div>
+
+				<div class="close"></div>
+
+			</div>
+		</div>
+
+
+	</div>
+
+	<!-- MODAL 3 ENDS -->
+	
+	
+	
+	<!-- MODAL 4 BEGINS -->
+	
+	
+	
+	
+	
+	
+	<div class="modal modal_window" id="modal_3">
+
+	<div class="modal_shim"></div>
+		<div class="modal_content">
+			<div class="modal_wrapper">
+
+
+
+				<div class="wrapper">
+
+					<h1 class="big_h">Подушки и одеяла</h1>
+					<p class="text">Мы убеждены, что подушки и одеяла должны быть легкими, мягкими и сохранять форму даже после нескольких
+лет эксплуатации. Изготовленные в соответствии с современными стандартами качества и требованиями
+к экологичности.</p>
+
+					<div class="modal_grid">
+
+						<!-- cell begins -->
+						<div class="cell">
+
+							<div class="bg_img">
+								<img src="images/modal/modal_pillow_1.jpg" alt="">
+							</div>
+
+							<div class="text">
+								<h6 class="small_h">Подушка синтепоновая</h6>
+								<p>Размеры: 50х250 см</p>
+								<ul class="price"><span>Цена:</span>
+									<li>3 000 тг</li>
+									
+								</ul>
+							</div>
+						</div>
+						<!-- cell ends -->
+
+
+						<!-- cell begins -->
+						<div class="cell">
+
+							<div class="bg_img">
+								<img src="images/modal/modal_pillow_2.jpg" alt="">
+							</div>
+
+							<div class="text">
+								<h6 class="small_h">Подушка бамбуковая</h6>
+								<p>Размеры: 50х250 см</p>
+								<ul class="price"><span>Цена:</span>
+									<li>4 500 тг</li>
+									
+								</ul>
+							</div>
+						</div>
+						<!-- cell ends -->
+							<!-- cell begins -->
+						<div class="cell">
+
+							<div class="bg_img">
+								<img src="images/modal/modal_pillow_3.jpg" alt="">
+							</div>
+
+							<div class="text">
+								<h6 class="small_h">Подушка ортопедическая</h6>
+								<p>Размеры: 50х250 см</p>
+								<ul class="price"><span>Цена:</span>
+									<li>5 000 тг</li>
+									
+								</ul>
+							</div>
+						</div>
+						<!-- cell ends -->
+							<!-- cell begins -->
+						<div class="cell">
+
+							<div class="bg_img">
+								<img src="images/modal/modal_pillow_4.jpg" alt="">
+							</div>
+
+							<div class="text">
+								<h6 class="small_h">Одеяло верблюжье</h6>
+								<p>Размеры: 50х250 см</p>
+								<ul class="price"><span>Цена:</span>
+									<li>Двухспалка 8 000 тг</li>
+									<li>Полуторка 8 000 тг</li>
+									
+								</ul>
+							</div>
+						</div>
+						<!-- cell ends -->
+							<!-- cell begins -->
+						<div class="cell">
+
+							<div class="bg_img">
+								<img src="images/modal/modal_pillow_5.jpg" alt="">
+							</div>
+
+							<div class="text">
+								<h6 class="small_h">Одеяло синтепоновое</h6>
 								<p>Размеры: 50х250 см</p>
 								<ul class="price"><span>Цена:</span>
 									<li>Двухспалка 8 000 тг</li>
@@ -749,9 +1222,9 @@
 						<h1 class="big_h">Узнайте больше об интересующей вас коллекции</h1>
 						<p>Оставьте заявку на бесплатную консультацию продавца</p>
 
-						<form>
-							<div class="field_name"><input type="text" placeholder="Введите ваше имя" class="input_name"></div>
-							<div class="field_phone"><input type="text" placeholder="Ваш телефон" class="input_phone"></div>
+						<form id="form_6">
+							<div class="field_name"><input type="text" placeholder="Введите ваше имя" class="input_name" name="uname"></div>
+							<div class="field_phone"><input type="text" placeholder="Ваш телефон" class="input_phone" name="uphone"></div>
 
 							<button type="submit" class="button form_button">Оставить заявку</button>
 
@@ -770,11 +1243,19 @@
 
 	</div>
 
+	<!-- MODAL 3 ENDS -->
+	
+	
+	
+	
+
+
+
 
 
 
 	<div class="modal modal_window modal_photo" id="modal_photo">
-		<div class="modal_shim"></div>
+
 
 		<div class="modal_content">
 			<div class="modal_wrapper">
@@ -796,6 +1277,65 @@
 
 
 	</div>
+
+
+
+	<div class="modal_window modal" id="modal_call">
+
+		<div class="modal_shim transparent_shim "></div>
+		
+		<div class="modal_content">
+			<div class="modal_wrapper">
+
+				<div class="container">
+
+					<h1 class="mid_h">Узнайте больше об интересующей вас коллекции</h1>
+					<p>Оставьте заявку на бесплатную консультацию продавца</p>
+
+					<form id="form_7">
+						<div class="field_name"><input type="text" placeholder="Введите ваше имя" class="input_name" name="uname"></div>
+						<div class="field_phone"><input type="text" placeholder="Ваш телефон" class="input_phone" name="uphone"></div>
+
+						<button type="submit" class="button form_button">Оставить заявку</button>
+
+
+					</form>
+					<div class="close"></div>
+
+				</div>
+
+
+			</div>
+		</div>
+
+
+	</div>
+
+
+<div class="modal_window modal" id="modal_success">
+
+		<div class="modal_shim transparent_shim"></div>
+		
+		<div class="modal_content">
+		
+
+				<div class="container">
+
+					<div class="image"><img src="images/icon_success.png" alt=""></div>
+								<div class="text"><h6 class="small_h">Заявка принята</h6>
+								<p>Наш менеджер свяжеться с вами в ближайшее время</p></div>
+									
+																	
+					<div class="close"></div>
+
+				</div>
+
+
+		</div>
+
+
+	</div>
+
 
 
 

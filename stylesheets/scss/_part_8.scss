@@ -1,7 +1,11 @@
 .part_8 {
+	* {
+		position: relative
+	}
 	$big_padding: 40px;
 	position: relative;
-	padding: $pad 0;
+	padding-top: 60px;
+	padding-bottom: 20px;
 	.trans_bg {
 		background-image: url(../images/bg_sect_8.jpg);
 		opacity: 0.15;
@@ -16,7 +20,7 @@
 	.slider {
 		text-align: center;
 	}
-	.slick-prev,
+	/*.slick-prev,
 	.slick-next {
 		@extend %clear_default_button_style;
 		position: absolute;
@@ -38,6 +42,24 @@
 	}
 	.slick-next {
 		right: 0
+	}*/
+	.slick-prev,
+	.slick-next {
+		@extend %clear_default_button_style;
+		position: absolute;
+		width: 21px;
+		height: 19px;
+		background-image: url(../images/icon_quote.png);
+		background-size: contain;
+		top: $big_padding + $pad;
+		cursor: pointer;
+	}
+	.slick-prev {
+		left: 0;
+	}
+	.slick-next {
+		right: 0;
+		transform: rotate(180deg)
 	}
 	.slick-dots {
 		display: inline-block;
@@ -63,7 +85,7 @@
 		$btn_height: 50px;
 		position: relative;
 		padding: $big_padding $big_padding 5px $big_padding;
-		&:before,
+		/*&:before,
 		&:after {
 			content: '';
 			position: absolute;
@@ -79,7 +101,7 @@
 		&:after {
 			right: 0;
 			transform: rotate(180deg)
-		}
+		}*/
 		.mid_h {
 			text-align: left;
 			padding: $pad 0;
@@ -104,7 +126,7 @@
 				padding: 0 10px;
 				font-size: $fs_18;
 				vertical-align: baseline;
-				line-height: $btn_height;
+				line-height: $btn_height - 2px;
 			}
 		}
 		.popup {
@@ -112,7 +134,7 @@
 			position: absolute;
 			top: 0;
 			bottom: 10px + $btn_height + $pad;
-			right: 0;
+			right: 30px;
 			left: 40%;
 			box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.2);
 			border-radius: 5px;

@@ -15,11 +15,15 @@
 		bottom: 0;
 	}
 	&.modal_photo {
+		background-color: white;
 		.modal_image {
 			display: block;
 			margin: auto;
 			width: 100%;
 			height: auto;
+		}
+		.scroll-bar {
+			display: none !important;
 		}
 	}
 	.modal_content {
@@ -76,11 +80,15 @@
 					font-size: $fs_16;
 					line-height: 120%;
 					margin-bottom: $pad;
+					line-height: 150%;
+					color: $font_soft;
+					white-space: pre-line;
 				}
 				.price {
 					width: 100%;
 					display: block;
 					font-family: Medium;
+					font-weight: 600;
 					font-size: $fs_18;
 					text-align: left;
 					span {
@@ -154,12 +162,16 @@
 		background-color: rgba(0, 0, 0, 0.65);
 	}
 	.container {
-		position: relative;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		transform: translateY(-50%);
 		width: 560px;
 		border-radius: $border-rad;
 		background-color: white;
 		padding: 30px $pad $pad $pad;
-		margin: 10% auto;
+		margin: auto;
 		@extend %clear;
 		.mid_h {
 			text-align: center;
@@ -174,10 +186,14 @@
 		.form_button {
 			width: 500px;
 			display: block;
-			margin: 10px auto;
+			margin: 15px auto;
 			input {
 				width: 100%;
 			}
+		}
+		.field_name,
+		.field_phone {
+			margin-bottom: 50px;
 		}
 		.close {
 			position: absolute;

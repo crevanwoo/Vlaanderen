@@ -38,6 +38,7 @@
 		.text {
 			margin-top: 10px;
 			font-family: Medium;
+			font-weight: 600;
 			font-size: $fs_24
 		}
 	}
@@ -54,6 +55,7 @@
 			border: 2px solid white;
 			border-radius: $border_rad;
 			color: white;
+			transition-duration: 0.4s;
 			&:hover {
 				color: #6699cc;
 				background-color: white;

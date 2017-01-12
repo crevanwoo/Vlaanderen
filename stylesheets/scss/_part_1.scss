@@ -1,7 +1,7 @@
 $part_1_logo_height: 70px;
 .part_1 {
 	position: relative;
-	height: 580px + $header_height;
+	height: 580px + 160px + $header_height;//580px + $header_height;
 	padding-top: $header_height;
 	background-origin: content-box;
 	background-image: url(../images/bg_top.jpg);
@@ -16,12 +16,13 @@ $part_1_logo_height: 70px;
 	}
 	.wrapper {
 		@extend %clear;
-		margin-top: 70px;
+		//margin-top: 70px;
+		margin-top: 40px;
 		text-align: center;
 		.part_1_logo {
 			float: left;
 			width: 250px;
-			margin-bottom: 70px;
+			//margin-bottom: 70px;
 			.top {
 				margin-bottom: $pad;
 				@extend %clear;
@@ -38,6 +39,7 @@ $part_1_logo_height: 70px;
 					float: left;
 					line-height: $part_1_logo_height;
 					font-family: Medium;
+					font-weight: 600;
 					font-size: $fs_24;
 				}
 			}
@@ -52,6 +54,7 @@ $part_1_logo_height: 70px;
 			.tel_number {
 				margin-bottom: 15px;
 				font-family: Medium;
+				font-weight: 600;
 				font-size: $fs_24;
 			}
 			.part_1_button {
@@ -75,10 +78,13 @@ $part_1_logo_height: 70px;
 		}
 		.part_1_text {
 			clear: both;
-			margin-bottom: 110px;
+			padding-top: 180px;
+			//padding-top: 150px;//
+			margin-bottom: 180px;//110px;
 			text-align: center;
 			line-height: 150%;
 			font-family: Medium;
+			font-weight: 600;
 			font-size: $fs_30;
 		}
 		.button {

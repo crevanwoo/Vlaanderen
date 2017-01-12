@@ -1,22 +1,36 @@
     //Fonts
     @font-face {
     	font-family: Light;
-    	src: url(../fonts/GothamProLight.ttf);
+    	src: url("../fonts/GothamProLight/GothamProLight.eot");
+    	src: url("../fonts/GothamProLight/GothamProLight.eot?#iefix")format("embedded-opentype"), url("../fonts/GothamProLight/GothamProLight.woff") format("woff"), url("../fonts/GothamProLight/GothamProLight.ttf") format("truetype");
+    	font-style: normal;
+    	font-weight: normal;
     }
     
     @font-face {
     	font-family: Regular;
-    	src: url(../fonts/GothamProRegular.ttf);
+    	src: url("../fonts/GothamProRegular/GothamProRegular.eot");
+    	src: url("../fonts/GothamProRegular/GothamProRegular.eot?#iefix")format("embedded-opentype"), url("../fonts/GothamProRegular/GothamProRegular.woff") format("woff"), url("../fonts/GothamProRegular/GothamProRegular.ttf") format("truetype");
+    	font-style: normal;
+    	font-weight: normal;
     }
     
     @font-face {
     	font-family: Medium;
-    	src: url(../fonts/GothamProMedium.ttf);
+    	src: url("../fonts/GothamProRegular/GothamProRegular.eot");
+    	src: url("../fonts/GothamProRegular/GothamProRegular.eot?#iefix")format("embedded-opentype"), url("../fonts/GothamProRegular/GothamProRegular.woff") format("woff"), url("../fonts/GothamProRegular/GothamProRegular.ttf") format("truetype");
+    	/*src: url("../fonts/GothamProMedium/GothamProMedium.eot");
+    	src: url("../fonts/GothamProMedium/GothamProMedium.eot?#iefix")format("embedded-opentype"), url("../fonts/GothamProMedium/GothamProMedium.woff") format("woff"), url("../fonts/GothamProMedium/GothamProMedium.ttf") format("truetype");*/
+    	font-style: normal;
+    	font-weight: 100;
     }
     
     @font-face {
     	font-family: Bold;
-    	src: url(../fonts/GothamProBold.ttf);
+    	src: url("../fonts/GothamProBold/GothamProBold.eot");
+    	src: url("../fonts/GothamProBold/GothamProBold.eot?#iefix")format("embedded-opentype"), url("../fonts/GothamProBold/GothamProBold.woff") format("woff"), url("../fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+    	font-style: normal;
+    	font-weight: normal;
     }
     
     //Font sizes
@@ -35,7 +49,10 @@
     $gray: #ccc;
     $orange: #ff6633;
     $btn_border_color: $orange;
-    $cold_shim: rgba(86, 123, 167, 0.7);
+    $cold_shim: rgba(86,
+    123,
+    167,
+    0.7);
     $font_soft: #666;
     $font_light: #999;
     $font_normal: #333;
@@ -97,21 +114,18 @@
     %grad {
     	@include orange_gradient;
     	position: relative;
-    	&:before {
-    		content: '';
-    		position: absolute;
-    		top: 0;
-    		bottom: 0;
-    		left: 0;
-    		right: 0;
-    		background-color: rgba(255, 255, 255, 0.10);
-    		display: none;
+    	>* {
+    		position: relative;
     	}
-    	&:hover {
-    		&:before {
-    			display: block;
-    			border-radius: $border-rad;
-    		}
+    	.button_hover {
+    		opacity: 0;
+    		position: absolute;
+    		width: 100%;
+    		height: 100%;
+    		top: 0;
+    		left: 0;
+    		border-radius: $border-rad;
+    		background-color: rgba(255, 255, 255, 0.10);
     	}
     }
     
@@ -120,9 +134,22 @@
     	border: $button_border;
     	border-radius: $border_rad;
     	cursor: pointer;
+    	position: relative;
+    	>* {
+    		position: relative;
+    	}
     	&:hover {
-    		@include orange_gradient;
     		color: white;
+    	}
+    	.button_hover {
+    		opacity: 0;
+    		position: absolute;
+    		width: 100%;
+    		height: 100%;
+    		top: 0;
+    		left: 0;
+    		border-radius: 5px;
+    		@include orange_gradient;
     	}
     }
     

@@ -15,7 +15,8 @@
 			.cell {
 				float: left;
 				width: 340px;
-				height: 375px;
+				min-height: 375px;
+				height: auto;
 				margin: $pad/2;
 				.bg_img {
 					@extend %bg_img;
