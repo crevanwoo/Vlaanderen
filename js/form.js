@@ -20,12 +20,11 @@ $(document).ready(function () {
 				$('.modal').each(function () {
 					$(this).fadeOut();
 				})
-
+                window_offset = window.pageYOffset;
 				setTimeout(function () {
 					$('#modal_success').fadeIn('slow');
 					$('#modal_success').find('.wrapper').customScrollbar();
 					var body_width = document.body.offsetWidth;
-					window_offset = window.pageYOffset;
 					document.body.style.marginRight = window.innerWidth - body_width + "px";
 					document.body.style.width = body_width + "px";
 					document.body.style.top = "-" + window_offset + "px";

@@ -224,6 +224,7 @@ $('.modal_window').on('click', function (e) {
 })
 
 
+$('header').css('width', $('body').width());
 
 var window_offset;
 
@@ -244,6 +245,7 @@ function modalOpen(e) {
 		document.body.style.width = body_width + "px";
 		document.body.style.top = "-" + window_offset + "px";
 		document.body.classList.add('hidden');
+
 	}
 }
 
