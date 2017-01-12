@@ -271,8 +271,28 @@ $('[data-modal-id], [data-modal-id] *').on('click', function (e) {
 	modalOpen(e)
 })
 
+var gallery_index = 0;
 $('[data-modal-id="modal_photo"]').on('click', function (e) {
 	var url = $(this).parent().attr('data-img-url');
+	gallery_index = $(this).parent().attr('data-gal');
+	$('#modal_photo').find('.modal_image').attr('src', url);
+
+})
+$('#modal_photo .next').on('click', function (e) {
+	gallery_index++;
+	if (gallery_index >= $('[data-gal]').length) {
+		gallery_index = 1;
+	}
+	var url = $('[' + 'data-gal="' + gallery_index + '"]').attr('data-img-url');
+	$('#modal_photo').find('.modal_image').attr('src', url);
+
+})
+$('#modal_photo .prev').on('click', function (e) {
+	gallery_index--;
+	if (gallery_index === 0) {
+		gallery_index = $('[data-gal]').length;
+	}
+	var url = $('[' + 'data-gal="' + gallery_index + '"]').attr('data-img-url');
 	$('#modal_photo').find('.modal_image').attr('src', url);
 
 })

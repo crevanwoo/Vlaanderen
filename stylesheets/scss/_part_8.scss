@@ -46,13 +46,8 @@
 	.slick-prev,
 	.slick-next {
 		@extend %clear_default_button_style;
-		position: absolute;
-		width: 21px;
-		height: 19px;
-		background-image: url(../images/icon_quote.png);
-		background-size: contain;
+		@extend %arrows;
 		top: $big_padding + $pad;
-		cursor: pointer;
 	}
 	.slick-prev {
 		left: 0;

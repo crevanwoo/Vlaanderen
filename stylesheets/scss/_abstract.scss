@@ -169,3 +169,12 @@
     	font-size: $fs_14;
     	color: $gray;
     }
+    
+    %arrows {
+    	position: absolute;
+    	width: 21px;
+    	height: 19px;
+    	background-image: url(../images/icon_quote.png);
+    	background-size: contain;
+    	cursor: pointer;
+    }

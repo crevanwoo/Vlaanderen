@@ -25,6 +25,26 @@
 		.scroll-bar {
 			display: none !important;
 		}
+		.overview {
+			width: 100%;
+		}
+		.prev,
+		.next {
+			@extend %arrows;
+			width: 30px;
+			height: 25px;
+			background-position: center center;
+			top: 50%;
+			z-index: 5;
+		}
+		.prev {
+			transform: translateY(-50%);
+			left: $pad
+		}
+		.next {
+			transform: rotate(180deg) translateY(50%);
+			right: $pad;
+		}
 	}
 	.modal_content {
 		z-index: 1;

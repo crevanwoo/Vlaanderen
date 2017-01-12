@@ -102,6 +102,16 @@
 .part_8 .single_slide .popup .scroll-bar .thumb, .modal_window .modal_content .scroll-bar .thumb:before {
   background-color: #ff6633; }
 
+.part_8 .slick-prev,
+.part_8 .slick-next, .modal_window.modal_photo .prev,
+.modal_window.modal_photo .next {
+  position: absolute;
+  width: 21px;
+  height: 19px;
+  background-image: url(../images/icon_quote.png);
+  background-size: contain;
+  cursor: pointer; }
+
 html,
 body {
   margin: 0;
@@ -809,13 +819,7 @@ header {
     text-align: center; }
   .part_8 .slick-prev,
   .part_8 .slick-next {
-    position: absolute;
-    width: 21px;
-    height: 19px;
-    background-image: url(../images/icon_quote.png);
-    background-size: contain;
-    top: 60px;
-    cursor: pointer; }
+    top: 60px; }
   .part_8 .slick-prev {
     left: 0; }
   .part_8 .slick-next {
@@ -1052,6 +1056,25 @@ footer {
       height: auto; }
     .modal_window.modal_photo .scroll-bar {
       display: none !important; }
+    .modal_window.modal_photo .overview {
+      width: 100%; }
+    .modal_window.modal_photo .prev,
+    .modal_window.modal_photo .next {
+      width: 30px;
+      height: 25px;
+      background-position: center center;
+      top: 50%;
+      z-index: 5; }
+    .modal_window.modal_photo .prev {
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      left: 20px; }
+    .modal_window.modal_photo .next {
+      -webkit-transform: rotate(180deg) translateY(50%);
+          -ms-transform: rotate(180deg) translateY(50%);
+              transform: rotate(180deg) translateY(50%);
+      right: 20px; }
   .modal_window .modal_content {
     z-index: 1;
     position: relative;
