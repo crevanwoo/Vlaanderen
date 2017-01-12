@@ -18,11 +18,11 @@
 			left: 0;
 			right: 0;
 			background-image: url(../images/bg_calc.jpg);
-			background-size: 1900px auto;
+			background-size: 1900px auto;			
 		}
 		.top {
 			@extend %clear;
-			padding-left: $pad;
+			//padding-left: $pad;
 			padding-top: 90px;
 			.ranges {
 				padding-bottom: $pad;
@@ -169,7 +169,7 @@
 			}
 		}
 		.bottom {
-			padding-left: $pad;
+			//padding-left: $pad;
 			clear: both;
 			.mid_h {
 				padding-top: 50px;
@@ -182,7 +182,8 @@
 			form {
 				button {
 					@extend .form_button;
-					width: 280px;
+					//width: 280px;
+					width: 300px;
 				}
 			}
 		}

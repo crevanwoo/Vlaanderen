@@ -504,7 +504,6 @@ header {
     background-image: url(../images/bg_calc.jpg);
     background-size: 1900px auto; }
   .part_4 .top {
-    padding-left: 20px;
     padding-top: 90px; }
     .part_4 .top .ranges {
       padding-bottom: 20px;
@@ -620,7 +619,6 @@ header {
             top: 115px;
             right: 160px; }
   .part_4 .bottom {
-    padding-left: 20px;
     clear: both; }
     .part_4 .bottom .mid_h {
       padding-top: 50px; }
@@ -629,7 +627,7 @@ header {
       padding-top: 10px;
       text-align: left; }
     .part_4 .bottom form button {
-      width: 280px; }
+      width: 300px; }
 
 .part_5 {
   position: relative;
@@ -654,7 +652,7 @@ header {
           -ms-transform: translateY(-50%);
               transform: translateY(-50%); }
   .part_5 .part_5_left {
-    left: 0;
+    left: 20px;
     width: 500px;
     color: white; }
     .part_5 .part_5_left .picture {
@@ -670,9 +668,10 @@ header {
       font-weight: 600;
       font-size: 24px; }
   .part_5 .part_5_right {
-    right: 0; }
+    right: 20px; }
     .part_5 .part_5_right .part_5_button {
       display: inline-block;
+      width: 300px;
       height: 54px;
       padding-right: 25px;
       padding-left: 10px;
@@ -819,7 +818,8 @@ header {
     text-align: center; }
   .part_8 .slick-prev,
   .part_8 .slick-next {
-    top: 60px; }
+    top: 60px;
+    z-index: 3; }
   .part_8 .slick-prev {
     left: 0; }
   .part_8 .slick-next {
@@ -1129,7 +1129,8 @@ footer {
           font-family: Medium;
           font-weight: 600;
           font-size: 18px;
-          text-align: left; }
+          text-align: left;
+          white-space: pre-line; }
           .modal_window .modal_content .modal_grid .cell .price span {
             vertical-align: top; }
           .modal_window .modal_content .modal_grid .cell .price li {

@@ -48,6 +48,7 @@
 		@extend %clear_default_button_style;
 		@extend %arrows;
 		top: $big_padding + $pad;
+		z-index: 3;
 	}
 	.slick-prev {
 		left: 0;

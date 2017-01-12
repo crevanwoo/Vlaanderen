@@ -22,7 +22,7 @@
 		}
 	}
 	.part_5_left {
-		left: 0;
+		left: $pad;
 		@extend %clear;
 		width: 500px;
 		color: white;
@@ -43,11 +43,12 @@
 		}
 	}
 	.part_5_right {
-		right: 0;
+		right: $pad;
 		@extend %clear;
 		.part_5_button {
 			$btn_h: 54px;
 			display: inline-block;
+			width: 300px;
 			height: $btn_h;
 			padding-right: 25px;
 			padding-left: 10px;

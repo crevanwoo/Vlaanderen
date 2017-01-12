@@ -223,8 +223,9 @@ $('.modal_window').on('click', function (e) {
 	}
 })
 
-
-$('header').css('width', $('body').width());
+$(window).on('resize', function () {
+	$('header').css('width', $('body').width());
+})
 
 var window_offset;
 
@@ -237,6 +238,7 @@ function modalOpen(e) {
 	}
 	var modal_id = elem.getAttribute('data-modal-id');
 	if ($('#' + modal_id).length > 0) {
+		$('#' + modal_id).addClass('modal_visible');
 		$('#' + modal_id).fadeIn('slow');
 		$('#' + modal_id).find('.wrapper').customScrollbar();
 		var body_width = document.body.offsetWidth;
@@ -257,7 +259,7 @@ function modalClose(e) {
 	while (!elem.classList.contains('modal')) {
 		elem = elem.parentElement;
 	}
-
+	$('#' + elem.id).removeClass('modal_visible');
 	$('#' + elem.id).fadeOut('slow', modalAfterTransition);
 
 }
@@ -385,3 +387,47 @@ $('.button, .part_1_button, .part_8_button').on('mouseleave', function () {
 	})
 
 })
+
+
+/* ANCHOR FIX > */
+function checkLocation() {
+
+	var url = $(location).attr('href');
+
+	if (url.indexOf('#') != -1) {
+		var from = url.indexOf('#');
+		if (url.indexOf('?') != -1) {
+			var to = url.indexOf('?');
+		}
+		var anchor = url.slice(from, to || url.length);
+
+		switch (anchor) {
+
+			case '#modal_1':
+
+				$('[data-modal-id="modal_1"]').trigger('click');
+				break;
+
+			case '#modal_2':
+
+				$('[data-modal-id="modal_2"]').trigger('click');
+
+				break;
+			case '#modal_3':
+				$('[data-modal-id="modal_3"]').trigger('click');
+
+
+				break;
+			case '#modal_4':
+				$('[data-modal-id="modal_4"]').trigger('click');
+
+
+				break;
+		}
+	}
+
+}
+
+checkLocation();
+
+/* < ANCHOR FIX  */

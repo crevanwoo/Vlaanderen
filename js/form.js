@@ -17,10 +17,13 @@ $(document).ready(function () {
 				console.log(data);
 
 				$('#' + formID + ' ' + 'input').not(':input[type=submit], :input[type=hidden]').val('');
-				$('.modal').each(function () {
-					$(this).fadeOut();
-				})
-                window_offset = window.pageYOffset;
+
+				if ($('.modal_visible').length > 0) {
+					$('.modal_visible').fadeOut();
+				} else {
+					window_offset = window.pageYOffset;
+				}
+
 				setTimeout(function () {
 					$('#modal_success').fadeIn('slow');
 					$('#modal_success').find('.wrapper').customScrollbar();
