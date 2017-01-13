@@ -21,6 +21,9 @@
 			margin: auto;
 			width: 100%;
 			height: auto;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 		.scroll-bar {
 			display: none !important;
@@ -51,7 +54,7 @@
 		position: relative;
 		height: 100%;
 		.modal_wrapper {
-			padding: 100px 0 50px 0;
+			//padding: 100px 0 50px 0;
 			height: 100%;
 		}
 		.wrapper {
@@ -60,6 +63,7 @@
 			overflow: hidden;
 		}
 		.big_h {
+			padding-top: 100px;
 			padding-bottom: $pad
 		}
 		p.text {
@@ -125,7 +129,7 @@
 			}
 		}
 		.bottom {
-			padding-bottom: 40px;
+			padding-bottom: 100px;
 			.big_h {
 				padding-top: 40px;
 				padding-bottom: $pad;
@@ -139,8 +143,11 @@
 			position: fixed;
 			width: 20px;
 			right: 10px;
+			top: 100px;
+			bottom: 50px;
 			z-index: 1;
 			cursor: pointer;
+			height: auto !important;
 			&:before {
 				@extend %scroll;
 				content: '';

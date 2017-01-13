@@ -1,7 +1,7 @@
 $part_1_logo_height: 70px;
 .part_1 {
 	position: relative;
-	height: 580px + 160px + $header_height;//580px + $header_height;
+	height: 580px + 30px/*160px*/ + $header_height;//580px + $header_height;
 	padding-top: $header_height;
 	background-origin: content-box;
 	background-image: url(../images/bg_top.jpg);
@@ -78,9 +78,9 @@ $part_1_logo_height: 70px;
 		}
 		.part_1_text {
 			clear: both;
-			padding-top: 180px;
+			padding-top: 130px;//180px;
 			//padding-top: 150px;//
-			margin-bottom: 180px;//110px;
+			margin-bottom: 110px;//180px;//110px;
 			text-align: center;
 			line-height: 150%;
 			font-family: Medium;
