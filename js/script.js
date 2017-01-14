@@ -203,11 +203,16 @@ $(".input_name").attr('data-validation-regexp', "^[a-zA-ZА-Яа-яЁё ]{4,}$")
 $(".input_phone").addClass('form-control');
 $.validate({
 	addValidClassOnAll: true,
+	scrollToTopOnError: false,
 });
 
 $('.field_name .validator_message').text('Введите имя (более 3-х букв; допускаются русские и латинские символы, пробелы)');
 
 $('.field_phone .validator_message').text('Введите номер телефона (только цифры)');
+
+
+
+/*$('.field_name .validator_message, .field_phone .validator_message').text('Пожалуйста, заполните это поле');*/
 
 
 
@@ -217,10 +222,23 @@ $('.field_phone .validator_message').text('Введите номер телеф�
 /* --- Modal > --- */
 
 
+$('.modal_window').each(function () {
+
+		if (!$(this).find('.container, .modal_image').length > 0) {
+
+			$(this).find('.wrapper').prepend('<div class="modal_close_block" />')
+
+		}
+	}
+
+);
+
+
 
 $('.modal_window').on('click', function (e) {
+	console.log(e.target);
 
-	if (e.target.classList.contains('modal_content') || e.target.classList.contains('close') || e.target.classList.contains('modal_wrapper')) {
+	if (e.target.classList.contains('modal_content') || e.target.classList.contains('close') || e.target.classList.contains('modal_wrapper') || e.target.classList.contains('modal_close_block')) {
 		modalClose(e);
 	}
 });
@@ -261,6 +279,7 @@ function modalOpen(e) {
 		document.body.style.marginRight = window.innerWidth - body_width + "px";
 		document.body.style.width = body_width + "px";
 		document.body.style.top = "-" + window_offset + "px";
+		$('header').addClass('hide');
 		document.body.classList.add('hidden');
 
 	}
@@ -282,6 +301,7 @@ function modalClose(e) {
 function modalAfterTransition() {
 	document.body.style.marginRight = 0;
 	document.body.style.width = "initial";
+	$('header').removeClass('hide');
 	document.body.classList.remove('hidden');
 	window.scrollTo(0, window_offset);
 }

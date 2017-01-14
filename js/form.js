@@ -20,6 +20,7 @@ $(document).ready(function () {
 
 				if ($('.modal_visible').length > 0) {
 					$('.modal_visible').fadeOut();
+					$('header').addClass('hide');
 				} else {
 					window_offset = window.pageYOffset;
 				}

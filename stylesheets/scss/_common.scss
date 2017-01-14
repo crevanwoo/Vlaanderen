@@ -207,7 +207,8 @@ form {
 
 .validator_message {
 	$color: #f4c430;
-	display: none;
+	opacity: 0;
+	//display: none;
 	position: absolute;
 	padding: 5px;
 	width: 100%;
@@ -218,6 +219,7 @@ form {
 	bottom: -5px;
 	right: 0;
 	transform: translateY(100%);
+	transition-duration: 0.5s;
 	&:before {
 		content: '';
 		background-color: $color;
@@ -231,7 +233,8 @@ form {
 }
 
 .has-error .validator_message {
-	display: block;
+	opacity: 1;
+	//display: block;
 }
 
 #google_map .gm-style>div:not(:first-of-type) {

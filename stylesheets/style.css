@@ -290,7 +290,7 @@ form {
   width: 300px; }
 
 .validator_message {
-  display: none;
+  opacity: 0;
   position: absolute;
   padding: 5px;
   width: 100%;
@@ -302,7 +302,9 @@ form {
   right: 0;
   -webkit-transform: translateY(100%);
       -ms-transform: translateY(100%);
-          transform: translateY(100%); }
+          transform: translateY(100%);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s; }
   .validator_message:before {
     content: '';
     background-color: #f4c430;
@@ -316,7 +318,7 @@ form {
     top: -8px; }
 
 .has-error .validator_message {
-  display: block; }
+  opacity: 1; }
 
 #google_map .gm-style > div:not(:first-of-type) {
   display: none; }
@@ -326,7 +328,12 @@ header {
   height: 40px;
   width: 100%;
   background-color: white;
-  z-index: 3; }
+  z-index: 3;
+  opacity: 1;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s; }
+  header.hide {
+    opacity: 0; }
   header .header_nav {
     display: table; }
     header .header_nav .header_nav_items_wrapper {
@@ -351,7 +358,7 @@ header {
   position: relative;
   height: 650px;
   padding-top: 40px;
-  background-origin: content-box;
+  background-origin: padding-box;
   background-image: url(../images/bg_top.jpg);
   color: white; }
   .part_1:before {
@@ -1052,39 +1059,6 @@ footer {
     left: 0;
     right: 0;
     bottom: 0; }
-  .modal_window.modal_photo {
-    background-color: white; }
-    .modal_window.modal_photo .modal_image {
-      display: block;
-      margin: auto;
-      width: 100%;
-      height: auto;
-      position: absolute;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-              transform: translateY(-50%); }
-    .modal_window.modal_photo .scroll-bar {
-      display: none !important; }
-    .modal_window.modal_photo .overview {
-      width: 100%; }
-    .modal_window.modal_photo .prev,
-    .modal_window.modal_photo .next {
-      width: 30px;
-      height: 25px;
-      background-position: center center;
-      top: 50%;
-      z-index: 5; }
-    .modal_window.modal_photo .prev {
-      -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-              transform: translateY(-50%);
-      left: 20px; }
-    .modal_window.modal_photo .next {
-      -webkit-transform: rotate(180deg) translateY(50%);
-          -ms-transform: rotate(180deg) translateY(50%);
-              transform: rotate(180deg) translateY(50%);
-      right: 20px; }
   .modal_window .modal_content {
     z-index: 1;
     position: relative;
@@ -1095,8 +1069,9 @@ footer {
       position: relative;
       height: 100%;
       overflow: hidden; }
+      .modal_window .modal_content .wrapper .modal_close_block {
+        height: 100px; }
     .modal_window .modal_content .big_h {
-      padding-top: 100px;
       padding-bottom: 20px; }
     .modal_window .modal_content p.text {
       text-align: center;
@@ -1197,6 +1172,42 @@ footer {
       background-size: contain;
       background-position: center;
       cursor: pointer; }
+  .modal_window.modal_photo {
+    background-color: white; }
+    .modal_window.modal_photo .wrapper {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      height: auto; }
+    .modal_window.modal_photo .modal_image {
+      display: block;
+      margin: auto;
+      width: 100%;
+      height: auto; }
+    .modal_window.modal_photo .scroll-bar {
+      display: none; }
+    .modal_window.modal_photo .overview {
+      width: 100%; }
+    .modal_window.modal_photo .prev,
+    .modal_window.modal_photo .next {
+      width: 30px;
+      height: 25px;
+      background-position: center center;
+      top: 50%;
+      z-index: 5; }
+    .modal_window.modal_photo .prev {
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      left: 20px; }
+    .modal_window.modal_photo .next {
+      -webkit-transform: rotate(180deg) translateY(50%);
+          -ms-transform: rotate(180deg) translateY(50%);
+              transform: rotate(180deg) translateY(50%);
+      right: 20px; }
   .modal_window .transparent_shim {
     background-color: rgba(0, 0, 0, 0.65); }
   .modal_window .container {
